@@ -1,118 +1,737 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>T Fruit</title>
-    </head>
-    <body>
-        <div class="header">
-            <div class="header-top">
-                <div class="container">
-                    <div
-                        class="d-flex align-items-center justify-content-between"
-                    >
-                        <div class="header-top-left">
-                            <div class="contact d-flex">
-                                <div class="phone">
-                                    <i class="bi bi-telephone"></i>
-                                    0965338283
-                                </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
 
-                                <div class="address">Mai Dịch, Cầu Giấy</div>
-                            </div>
-                        </div>
-
-                        <div class="header-top-right">
-                            <!-- Modal trigger button -->
-                            <button
-                                type="button"
-                                class="btn btn-default btn-lg"
-                                data-bs-toggle="modal"
-                                data-bs-target="#user-modal"
-                            >
-                                <i class="bi bi-person-fill"></i>
-                            </button>
-
-                            <div class="btn-group">
-                                <button
-                                    class="btn btn-default dropdown-toggle"
-                                    type="button"
-                                    id="language"
-                                    data-bs-toggle="dropdown"
-                                    aria-haspopup="true"
-                                    aria-expanded="false"
-                                >
-                                    EN
-                                </button>
-                                <div
-                                    class="dropdown-menu dropdown-menu-end"
-                                    aria-labelledby="language"
-                                >
-                                    <a class="dropdown-item" href="#">EN</a>
-                                    <a class="dropdown-item" href="#">VI</a>
-                                </div>
-                            </div>
-
-                            <!-- Modal Body -->
-                            <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
-                            <div
-                                class="modal fade"
-                                id="user-modal"
-                                tabindex="-1"
-                                data-bs-backdrop="static"
-                                data-bs-keyboard="false"
-                                role="dialog"
-                                aria-labelledby="modalTitleId"
-                                aria-hidden="true"
-                            >
-                                <div
-                                    class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
-                                    role="document"
-                                >
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5
-                                                class="modal-title"
-                                                id="modalTitleId"
-                                            >
-                                                Modal title
-                                            </h5>
-                                            <button
-                                                type="button"
-                                                class="btn-close"
-                                                data-bs-dismiss="modal"
-                                                aria-label="Close"
-                                            ></button>
-                                        </div>
-                                        <div class="modal-body">Body</div>
-                                        <div class="modal-footer">
-                                            <button
-                                                type="button"
-                                                class="btn btn-secondary"
-                                                data-bs-dismiss="modal"
-                                            >
-                                                Close
-                                            </button>
-                                            <button
-                                                type="button"
-                                                class="btn btn-primary"
-                                            >
-                                                Save
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body style="background: #221e1e; color: white">
+    <header>
+      <div class="molda-mobile">
+        <div class="list-nav-mobile">
+          <div class="font-24 item-nav pd-t-40">
+            <div class="">
+              <div class="logo">
+                <a href="">
+                  <img
+                    src="https://patiotime.loftocean.com/wp-content/uploads/2022/04/pt-logo.svg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="close-btn-mobile">
+                <i class="bx bx-x"></i>
+              </div>
             </div>
+            <div class="nav-mobile">
+              <a class="color-white" href="menu.html">Menu</a>
+            </div>
+            <div
+              class="introduce-nav position-relative"
+              style="padding-left: 0"
+            >
+              <div
+                class="btn-about d-flex justify-content-between align-items-center"
+              >
+                <p style="margin-bottom: 0">Abouts</p>
+                <i class="bx bx-chevron-down"></i>
+              </div>
+
+              <div class="abouts-nav">
+                <div class="font-16">
+                  <a class="color-white" href="aboutRes.html"
+                    >About Restaurant</a
+                  >
+                </div>
+                <div class="font-16">
+                  <a class="color-white" href="aboutCheff.html">About Cheff</a>
+                </div>
+              </div>
+            </div>
+            <div class="nav-mobile">
+              <a class="color-white" href="contact.html">Contact</a>
+            </div>
+            <div class="nav-mobile">
+              <a class="color-white" href="blog.html"> Blog </a>
+            </div>
+            <div class="nav-mobile table-online">Find A Table</div>
+            <div class="nav-mobile">
+              <a class="color-white" href="order.html"> Order Online</a>
+            </div>
+            <div class="account-nav position-relative" style="padding-left: 0">
+              <div
+                class="btn-about d-flex justify-content-between align-items-center"
+              >
+                <p style="margin-bottom: 0">Account</p>
+                <i class="bx bx-chevron-down"></i>
+              </div>
+
+              <div class="accounts">
+                <div class="font-16">
+                  <a class="color-white" href="account.html">My Account</a>
+                </div>
+                <div class="font-16">
+                  <a class="color-white" href="cart.html">My Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="icons font-20 icons-nav">
+              <i class="bx bxl-facebook-circle"></i>
+              <i class="bx bxl-instagram"></i>
+              <i class="bx bxl-twitter"></i>
+              <i class="bx bxl-pinterest-alt"></i>
+              <i class="bx bxl-youtube"></i>
+            </div>
+            <div class="contact-nav">
+              <p class="pd-b-10">
+                <i class="bx bx-location-plus"></i> Silk St, Barbican, London
+                EC2Y 8DS, UK
+              </p>
+              <p class="pd-b-10"><i class="bx bx-phone"></i> +39-055-123456</p>
+              <p class="pd-b-10">
+                <i class="bx bx-envelope"></i> booking@patiotime.com
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container" style="height: 100%">
+        <div class="d-flex justify-content-center" style="width: 100%">
+          <nav>
+            <div class="container d-flex justify-content-between">
+              <div class="logo">
+                <a href="home.html">
+                  <img
+                    src="https://patiotime.loftocean.com/wp-content/uploads/2022/04/pt-logo.svg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <ul
+                class="color-white d-flex font-20 font-content align-items-center"
+                style="margin-bottom: 0"
+              >
+                <li><a class="color-white" href="menu.html">Menu</a></li>
+                <li class="position-relative introduce">
+                  <p style="margin-bottom: 0">Abouts</p>
+                  <div class="abouts font-nor">
+                    <div class="ab-us pd-b-10 pd-t-10 pd-l-20 border-bot">
+                      <a class="color-white" href="aboutRes.html"
+                        >About Restaurant</a
+                      >
+                    </div>
+                    <div class="ab-cheff pd-b-10 pd-l-20 pd-t-10">
+                      <a class="color-white" href="aboutCheff.html"
+                        >About Cheff</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="arrow"></div>
+                </li>
+                <li><a class="color-white" href="contact.html">Contact</a></li>
+                <li><a class="color-white" href="blog.html">Blog</a></li>
+                <li class="position-relative introduce">
+                  <i class="bx bx-user"></i>
+                  <div class="abouts font-nor">
+                    <div class="ab-us pd-b-10 pd-t-10 pd-l-20 border-bot">
+                      <a class="color-white" href="aboutRes.html"
+                        >About Restaurant</a
+                      >
+                    </div>
+                    <div class="ab-cheff pd-b-10 pd-l-20 pd-t-10">
+                      <a class="color-white" href="cart.html">My Cart</a>
+                    </div>
+                  </div>
+
+                  <div class="arrow"></div>
+                </li>
+                <li class="none-pd">
+                  <button class="set-btn btn-form">FIND A TABLE</button>
+                </li>
+                <li class="none-pd">
+                  <button class="set-btn">
+                    <a class="pimary-color" href="order.html"> ORDER ONLINE</a>
+                  </button>
+                </li>
+                <li class="font-btn open-nav"><i class="bx bx-menu"></i></li>
+              </ul>
+            </div>
+          </nav>
         </div>
 
-        <img src="/img/1.jpeg" alt="" />
-        <img src="/img/2.jpeg" alt="" />
-        <img src="/img/3.jpeg" alt="" />
-        <script type="module" src="js/index.js"></script>
-    </body>
+        <div
+          class="header-body d-flex justify-content-center align-items-center"
+        >
+          <div>
+            <div
+              class="text-center title-home-page d-flex justify-content-center align-items-center"
+              data-aos="fade-down"
+              data-aos-duration="1000"
+              data-aos-delay="500"
+            >
+              <div class="line"></div>
+              <h2 class="color-white font-30">WELLCOME TO TERRA RESTAURANT</h2>
+              <div class="line"></div>
+            </div>
+            <div class="header-body-content">
+              <div
+                class="content-header text-center"
+                data-aos="zoom-in"
+                data-aos-duration="1500"
+                data-aos-delay="1500"
+              >
+                <h1 class="color-white font-50 mg-b-20">
+                  Delicious Food & Wonderful
+                </h1>
+                <h1 class="color-white font-50">Eating Experience</h1>
+                <p class="font-content pd-t-20 color-white font-20">
+                  We Serve Food, Harmony, & Laughter Since 1998
+                </p>
+                <div
+                  class="btn-header color-white d-flex justify-content-center pd-t-30"
+                >
+                  <button class="set-btn font-w">
+                    <a class="pimary-color" href="menu.html">VIEW MENU</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="mg-t-80">
+      <div class="molda">
+        <div class="d-flex justify-content-center align-items-center">
+          <div class="form-table bg-white overflow-hidden">
+            <div
+              class="row align-items-center overflow-hidden"
+              style="--bs-gutter-x: 0rem"
+            >
+              <div class="col-xl-6 none overflow-hidden">
+                <img src="/image/image-form.svg" alt="" />
+              </div>
+              <div class="col-xl-6 col-sm-12 text-center pd-tb-30">
+                <h3 class="font-20 pimary-color font-w pd-t-30">
+                  ONLINE RESERVATION
+                </h3>
+                <h1 class="font-50 font-content color-black pd-t-30">
+                  BOOK A TABLE
+                </h1>
+                <form action="" class="mg-t-20">
+                  <div class="form">
+                    <div class="mg-b-20">
+                      <select
+                        name="persion"
+                        id="persion"
+                        style="font-size: 1.6rem"
+                      >
+                        <option value="">1 Persion</option>
+                        <option value="">2 Persion</option>
+                        <option value="">3 Persion</option>
+                        <option value="">4 Persion</option>
+                        <option value="">5 Persion</option>
+                        <option value="">6 Persion</option>
+                        <option value="">7 Persion</option>
+                      </select>
+                    </div>
+                    <div class="mg-b-20">
+                      <input
+                        class="font-16"
+                        type="date"
+                        name="day"
+                        id="day"
+                        value="30-9-2022"
+                      />
+                    </div>
+                    <div class="mg-b-20">
+                      <select
+                        name="persion"
+                        id="persion"
+                        style="font-size: 1.6rem"
+                      >
+                        <option value="">9h:00</option>
+                        <option value="">9h:30</option>
+                        <option value="">10h:00</option>
+                        <option value="">10h:30</option>
+                        <option value="">11h:00</option>
+                        <option value="">11h:30</option>
+                        <option value="">12h:00</option>
+                        <option value="">12h:30</option>
+                        <option value="">13h:00</option>
+                        <option value="">13h:30</option>
+                        <option value="">14h:30</option>
+                        <option value="">15h:00</option>
+                        <option value="">15h:30</option>
+                        <option value="">14h:00</option>
+                      </select>
+                    </div>
+                    <div class="mg-b-20">
+                      <input
+                        class="font-16"
+                        type="number"
+                        placeholder="Phone number"
+                      />
+                    </div>
+                    <button class="set-btn font-w">BOOK NOW</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <span class="close-btn"><i class="bx bx-x"></i></span>
+      </div>
+      <div class="container" style="--bs-gutter-x: 0rem">
+        <div class="row align-items-end" style="--bs-gutter-x: 0rem">
+          <div class="col-xl-6 col-sm-12">
+            <div
+              class="pd-lr-20"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
+              <div class="font-20 pimary-color font-w line-primary">
+                <h3>REFRESH YOUR TASTE BUDS</h3>
+              </div>
+              <div class="mg-t-20">
+                <h1 class="pd-t-30 font-50">
+                  Enjoy An Exceptional Journey of Taste
+                </h1>
+              </div>
+              <div class="mg-t-30">
+                <p class="font-20 font-nor mg-t-20">
+                  We see our customers as invited guests to a party, and we are
+                  the hosts. It’s our job every day to make every important
+                  aspect of the customer experience a little bit better.
+                </p>
+              </div>
+              <div class="mg-tb-20 pd-tb-40">
+                <a href="aboutRes.html"
+                  ><button class="set-btn">READ MORE</button></a
+                >
+              </div>
+            </div>
+            <div class="pd-lr-20">
+              <div
+                class="overflow-hidden"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
+                <img src="/image/dish1.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 none">
+            <div class="pd-lr-20">
+              <div
+                class="overflow-hidden"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                <img src="/image/dish2.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row pd-t-80 pd-b-20" style="--bs-gutter-x: 0rem">
+          <div class="col-xl-4 col-sm-12 pd-t-30">
+            <div class="pd-lr-20" data-aos="zoom-in" data-aos-duration="1000">
+              <div class="title-dish pd-b-20">
+                <p class="text-center font-20 pimary-color">FRESH TASTE BUDS</p>
+                <h2 class="text-center font-30 font-content">STARTERS</h2>
+              </div>
+              <div class="list-dish">
+                <div class="item-dish pd-b-10">
+                  <div
+                    class="d-flex justify-content-between font-20 font-content"
+                  >
+                    <div class="name-dish">Purple Corn Tostada</div>
+                    <div class="price-dish">$36</div>
+                  </div>
+                  <div class="decs-dish">
+                    <p class="font-nor font-16">
+                      Ricotta, goat cheese, beetroot and datterini.
+                    </p>
+                  </div>
+                </div>
+                <div class="item-dish pd-b-10">
+                  <div
+                    class="d-flex justify-content-between font-20 font-content"
+                  >
+                    <div class="name-dish">Bruno's Scribble</div>
+                    <div class="price-dish">$30</div>
+                  </div>
+                  <div class="decs-dish">
+                    <p class="font-nor font-16">
+                      Culatello, Spalla Cotta, Mortadella, Culacciona.
+                    </p>
+                  </div>
+                </div>
+                <div class="item-dish pd-b-10">
+                  <div
+                    class="d-flex justify-content-between font-20 font-content"
+                  >
+                    <div class="name-dish">Fresh Oysters Dozen</div>
+                    <div class="price-dish">$59</div>
+                  </div>
+                  <div class="decs-dish">
+                    <p class="font-nor font-16">
+                      Our selection of fresh oysters, limes.
+                    </p>
+                  </div>
+                </div>
+                <div class="item-dish pd-b-10">
+                  <div
+                    class="d-flex justify-content-between font-20 font-content"
+                  >
+                    <div class="name-dish">Wild Mushroom Arancini</div>
+                    <div class="price-dish">$18</div>
+                  </div>
+                  <div class="decs-dish">
+                    <p class="font-nor font-16">
+                      Porcini purée, parmesan, basil.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-sm-12 pd-t-30">
+            <div class="pd-lr-20" data-aos="zoom-in" data-aos-duration="1000">
+              <div class="title-dish pd-b-20">
+                <p class="text-center font-20 pimary-color">TOP RATED DISHES</p>
+                <h2 class="text-center font-30 font-content">MAIN DISHES</h2>
+              </div>
+              <div class="list-dish">
+                <div class="item-dish pd-b-10">
+                  <div
+                    class="d-flex justify-content-between font-20 font-content"
+                  >
+                    <div class="name-dish">Crispy Skin Chicken</div>
+                    <div class="price-dish">$25</div>
+                  </div>
+                  <div class="decs-dish">
+                    <p class="font-nor font-16">
+                      Ricotta, goat cheese, beetroot and datterini.
+                    </p>
+                  </div>
+                </div>
+                <div class="item-dish pd-b-10">
+                  <div
+                    class="d-flex justify-content-between font-20 font-content"
+                  >
+                    <div class="name-dish">Flank Steak</div>
+                    <div class="price-dish">$30</div>
+                  </div>
+                  <div class="decs-dish">
+                    <p class="font-nor font-16">
+                      Served medium rare, salad, mushroom sauce.
+                    </p>
+                  </div>
+                </div>
+                <div class="item-dish pd-b-10">
+                  <div
+                    class="d-flex justify-content-between font-20 font-content"
+                  >
+                    <div class="name-dish">Ebony Fillet Steak</div>
+                    <div class="price-dish">$59</div>
+                  </div>
+                  <div class="decs-dish">
+                    <p class="font-nor font-16">Truffle mash, pepper sauce.</p>
+                  </div>
+                </div>
+                <div class="item-dish pd-b-10">
+                  <div
+                    class="d-flex justify-content-between font-20 font-content"
+                  >
+                    <div class="name-dish">Fish & Chips</div>
+                    <div class="price-dish">$18</div>
+                  </div>
+                  <div class="decs-dish">
+                    <p class="font-nor font-16">
+                      Atlantic cod fillet, chips, salad, tartare, lemon.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-sm-12 pd-t-30">
+            <div class="pd-lr-20" data-aos="zoom-in" data-aos-duration="1000">
+              <div class="title-dish pd-b-20">
+                <p class="text-center font-20 pimary-color">DRINK & WINES</p>
+                <h2 class="text-center font-30 font-content">BEVERAGE</h2>
+              </div>
+              <div class="list-dish">
+                <div class="item-dish pd-b-10">
+                  <div
+                    class="d-flex justify-content-between font-20 font-content"
+                  >
+                    <div class="name-dish">Prickly Pear Tonic</div>
+                    <div class="price-dish">$36</div>
+                  </div>
+                  <div class="decs-dish">
+                    <p class="font-nor font-16">
+                      Prickly Pear, Chancaca, Key Lime, and Tonic
+                    </p>
+                  </div>
+                </div>
+                <div class="item-dish pd-b-10">
+                  <div
+                    class="d-flex justify-content-between font-20 font-content"
+                  >
+                    <div class="name-dish">Tommy's Margarita</div>
+                    <div class="price-dish">$30</div>
+                  </div>
+                  <div class="decs-dish">
+                    <p class="font-nor font-16">
+                      Tequila, fresh lime juice, and orange liqueur
+                    </p>
+                  </div>
+                </div>
+                <div class="item-dish pd-b-10">
+                  <div
+                    class="d-flex justify-content-between font-20 font-content"
+                  >
+                    <div class="name-dish">Chicha Morada</div>
+                    <div class="price-dish">$59</div>
+                  </div>
+                  <div class="decs-dish">
+                    <p class="font-nor font-16">
+                      Purple Corn, Pineapple, Apple, Cinnamon
+                    </p>
+                  </div>
+                </div>
+                <div class="item-dish pd-b-10">
+                  <div
+                    class="d-flex justify-content-between font-20 font-content"
+                  >
+                    <div class="name-dish">Better Boy</div>
+                    <div class="price-dish">$18</div>
+                  </div>
+                  <div class="decs-dish">
+                    <p class="font-nor font-16">
+                      Tomato, Salt, Black Pepper, Lemon
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex gap-20 justify-content-center pd-b-100">
+          <div data-aos="fade-right" data-aos-duration="2000">
+            <div class="btn-view-menu">
+              <button class="set-btn">
+                <a class="pimary-color" href="menu.html"> VIEW MENUS </a>
+              </button>
+            </div>
+          </div>
+          <div data-aos="fade-left" data-aos-duration="2000">
+            <div class="btn-order">
+              <button class="set-btn">
+                <a class="pimary-color" href="order.html"> ORDER ONLINE</a>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row pd-t-80 pd-none" style="--bs-gutter-x: 0rem">
+          <div class="col-xl-6 col-sm-12 none">
+            <div class="pd-lr-20">
+              <div class="position-relative">
+                <div
+                  class="cheff cheff-1 position-absolute overflow-hidden"
+                  data-aos="fade-down-left"
+                  data-aos-duration="1000"
+                  style="width: 90%"
+                >
+                  <img src="/image/cheff-home-1.svg" alt="" />
+                </div>
+
+                <div
+                  class="cheff cheff-2 position-absolute overflow-hidden"
+                  data-aos="fade-up-right"
+                  data-aos-duration="1000"
+                  style="width: 75%"
+                >
+                  <img src="/image/cheff-home-2.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 col-sm-12 align-items-center pd-tb-150 pd-none">
+            <div
+              class="pd-lr-20"
+              data-aos="fade-up-left"
+              data-aos-duration="1000"
+            >
+              <div class="pd-b-20">
+                <p class="font-20 pimary-color font-w line-primary">
+                  QUALITY & BALANCE
+                </p>
+              </div>
+              <div>
+                <h1 class="font-50">OUR FOOD PHILOSOPHY</h1>
+              </div>
+              <div class="pd-t-30">
+                <p class="font-20 font-nor">
+                  Simple and balanced. Alexander Petillo brings together flavors
+                  and specialties from Italy and beyond to create his own
+                  culinary world, full of surprising artistry.
+                </p>
+              </div>
+              <div class="pd-t-30">
+                <button class="set-btn">
+                  <a class="pimary-color" href="aboutCheff.html">
+                    LEARN MORE
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row pd-t-80 align-items-center" style="--bs-gutter-x: 0rem">
+          <div
+            class="col-xl-6 col-sm-12"
+            data-aos="fade-right"
+            data-aos-duration="2000"
+          >
+            <div class="contact-home-page">
+              <div>
+                <p class="font-20 pimary-color font-w line-primary">
+                  RIGHT HERE WAITING
+                </p>
+              </div>
+              <div class="">
+                <h1 class="font-50">VISIT OUR RESTAURANT</h1>
+              </div>
+              <div class="">
+                <p class="text-nor font-16">
+                  We see our customers as invited guests to a party, and we are
+                  the hosts. Piazza della Signoria, 1050122 . Firenze . Italy
+                </p>
+              </div>
+              <div class="font-16 font-nor">
+                <p>M: booking@patiotime.com</p>
+                <p>T: +39 055 1234567</p>
+              </div>
+              <div class="pd-t-30">
+                <button class="set-btn">
+                  <a class="pimary-color" href="contact.html">
+                    GET DIRECTIONS
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 col-sm-12">
+            <div class="pd-lr-20 d-flex align-items-center">
+              <div
+                class="overflow-hidden"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
+                <img src="/image/contact-home-1.svg" alt="" />
+              </div>
+              <div
+                class="overflow-hidden"
+                data-aos="fade-left"
+                data-aos-duration="2000"
+              >
+                <img src="/image/contact-home-2.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid" style="--bs-gutter-x: 0rem">
+        <div class="book-table mg-t-80 text-center pd-tb-100">
+          <div class="">
+            <p class="font-20 pimary-color font-w line-primary">
+              ONLINE RESERVATION
+            </p>
+            <h1 class="font-50 font-content">BOOK A TABLE</h1>
+          </div>
+          <div class="mg-t-40 btn-form">
+            <button class="set-btn pd-t-30">BOOK A TABLE NOW</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="mg-t-80">
+      <div class="container" style="--bs-gutter-x: 0rem">
+        <div class="row align-items-top" style="--bs-gutter-x: 0rem">
+          <div class="col-xl-4 pd-b-30 col-sm-12">
+            <div class="pd-lr-20">
+              <h2 class="font-30 font-content">Patio.Time</h2>
+              <p class="font-16 font-nor mg-t-20">
+                Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
+                arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+              </p>
+              <div class="icons font-20 mg-t-20">
+                <i class="bx bxl-facebook-circle"></i>
+                <i class="bx bxl-instagram"></i>
+                <i class="bx bxl-twitter"></i>
+                <i class="bx bxl-pinterest-alt"></i>
+                <i class="bx bxl-youtube"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 pd-b-30 col-sm-12">
+            <div class="pd-lr-20">
+              <h2 class="font-24">WORKING HOURS</h2>
+              <div class="time-work font-16 font-nor mg-t-20">
+                <div class="d-flex justify-content-between">
+                  <p>Monday - Friday</p>
+                  <p>09:00 - 22:00</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p>Saturday</p>
+                  <p>11:00 -00:00</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p>Sunday</p>
+                  <p>11:00 - 23:00</p>
+                </div>
+                <div class="d-flex justify-content-between mg-t-20">
+                  <p>* Happy hour</p>
+                  <p>17:00 - 21:00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 pd-b-30 col-sm-12">
+            <div class="pd-lr-20">
+              <h2 class="font-24">OUR ADDRESS</h2>
+              <div class="time-work font-16 font-nor mg-t-20 contact-home">
+                <p class="pd-b-20">
+                  <i class="bx bx-location-plus"></i> Silk St, Barbican, London
+                  EC2Y 8DS, UK
+                </p>
+                <p class="pd-b-20">
+                  <i class="bx bx-phone"></i> +39-055-123456
+                </p>
+                <p class="pd-b-20">
+                  <i class="bx bx-envelope"></i> booking@patiotime.com
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="js/home.js" type="module"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </html>

@@ -1,8 +1,6 @@
 import "../css/home.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "boxicons/css/boxicons.min.css";
-import "aos/dist/aos.js";
-import "aos/dist/aos.css";
 
 const btnForms = document.querySelectorAll(".btn-form");
 const molda = document.querySelector(".molda");
@@ -65,5 +63,3 @@ function scrollFunction() {
     document.querySelector("nav").style.marginTop = "5rem";
   }
 }
-
-
