@@ -1,0 +1,22 @@
+{
+  "name": "web27-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^3.1.0"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "boostrap": "^2.0.0",
+    "bootstrap": "^5.2.2",
+    "bootstrap-icons": "^1.9.1",
+    "boxicons": "^2.1.4",
+    "jquery": "^3.6.1"
+  }
+}

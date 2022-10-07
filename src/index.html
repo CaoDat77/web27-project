@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>T Fruit</title>
+    </head>
+    <body>
+        <div class="header">
+            <div class="header-top">
+                <div class="container">
+                    <div
+                        class="d-flex align-items-center justify-content-between"
+                    >
+                        <div class="header-top-left">
+                            <div class="contact d-flex">
+                                <div class="phone">
+                                    <i class="bi bi-telephone"></i>
+                                    0965338283
+                                </div>
+
+                                <div class="address">Mai Dịch, Cầu Giấy</div>
+                            </div>
+                        </div>
+
+                        <div class="header-top-right">
+                            <!-- Modal trigger button -->
+                            <button
+                                type="button"
+                                class="btn btn-default btn-lg"
+                                data-bs-toggle="modal"
+                                data-bs-target="#user-modal"
+                            >
+                                <i class="bi bi-person-fill"></i>
+                            </button>
+
+                            <div class="btn-group">
+                                <button
+                                    class="btn btn-default dropdown-toggle"
+                                    type="button"
+                                    id="language"
+                                    data-bs-toggle="dropdown"
+                                    aria-haspopup="true"
+                                    aria-expanded="false"
+                                >
+                                    EN
+                                </button>
+                                <div
+                                    class="dropdown-menu dropdown-menu-end"
+                                    aria-labelledby="language"
+                                >
+                                    <a class="dropdown-item" href="#">EN</a>
+                                    <a class="dropdown-item" href="#">VI</a>
+                                </div>
+                            </div>
+
+                            <!-- Modal Body -->
+                            <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+                            <div
+                                class="modal fade"
+                                id="user-modal"
+                                tabindex="-1"
+                                data-bs-backdrop="static"
+                                data-bs-keyboard="false"
+                                role="dialog"
+                                aria-labelledby="modalTitleId"
+                                aria-hidden="true"
+                            >
+                                <div
+                                    class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
+                                    role="document"
+                                >
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5
+                                                class="modal-title"
+                                                id="modalTitleId"
+                                            >
+                                                Modal title
+                                            </h5>
+                                            <button
+                                                type="button"
+                                                class="btn-close"
+                                                data-bs-dismiss="modal"
+                                                aria-label="Close"
+                                            ></button>
+                                        </div>
+                                        <div class="modal-body">Body</div>
+                                        <div class="modal-footer">
+                                            <button
+                                                type="button"
+                                                class="btn btn-secondary"
+                                                data-bs-dismiss="modal"
+                                            >
+                                                Close
+                                            </button>
+                                            <button
+                                                type="button"
+                                                class="btn btn-primary"
+                                            >
+                                                Save
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <img src="/img/1.jpeg" alt="" />
+        <img src="/img/2.jpeg" alt="" />
+        <img src="/img/3.jpeg" alt="" />
+        <script type="module" src="js/index.js"></script>
+    </body>
+</html>
