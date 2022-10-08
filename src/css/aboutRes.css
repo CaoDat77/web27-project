@@ -276,6 +276,10 @@ button {
   overflow: hidden;
 }
 
+.big-post img:hover {
+  transform: scale(1);
+}
+
 .accounts {
   display: none;
   cursor: pointer;
