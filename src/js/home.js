@@ -1,4 +1,4 @@
-import "../css/home.css";
+import "../css/index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "boxicons/css/boxicons.min.css";
 

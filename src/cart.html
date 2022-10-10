@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link rel="stylesheet" href="cart.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body style="background: #221e1e; color: white">
+    <header>
+      <div class="molda-mobile">
+        <div class="list-nav-mobile">
+          <div class="font-24 item-nav pd-t-40">
+            <div class="">
+              <div class="logo">
+                <a href="">
+                  <img
+                    src="https://patiotime.loftocean.com/wp-content/uploads/2022/04/pt-logo.svg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="close-btn-mobile">
+                <i class="bx bx-x"></i>
+              </div>
+            </div>
+            <div class="nav-mobile">
+              <a class="color-white" href="menu.html">Menu</a>
+            </div>
+            <div
+              class="introduce-nav position-relative"
+              style="padding-left: 0"
+            >
+              <div
+                class="btn-about d-flex justify-content-between align-items-center"
+              >
+                <p style="margin-bottom: 0">Abouts</p>
+                <i class="bx bx-chevron-down"></i>
+              </div>
+
+              <div class="abouts-nav">
+                <div class="font-16">
+                  <a class="color-white" href="aboutRes.html"
+                    >About Restaurant</a
+                  >
+                </div>
+                <div class="font-16">
+                  <a class="color-white" href="aboutCheff.html">About Cheff</a>
+                </div>
+              </div>
+            </div>
+            <div class="nav-mobile">
+              <a class="color-white" href="contact.html">Contact</a>
+            </div>
+            <div class="nav-mobile">
+              <a class="color-white" href="blog.html"> Blog </a>
+            </div>
+            <div class="nav-mobile table-online">Find A Table</div>
+            <div class="nav-mobile">
+              <a class="color-white" href="order.html"> Order Online</a>
+            </div>
+            <div class="account-nav position-relative" style="padding-left: 0">
+              <div
+                class="btn-about d-flex justify-content-between align-items-center"
+              >
+                <p style="margin-bottom: 0">Account</p>
+                <i class="bx bx-chevron-down"></i>
+              </div>
+
+              <div class="accounts">
+                <div class="font-16">
+                  <a class="color-white" href="account.html">My Account</a>
+                </div>
+                <div class="font-16">
+                  <a class="color-white" href="cart.html">My Cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="icons font-20 icons-nav">
+              <i class="bx bxl-facebook-circle"></i>
+              <i class="bx bxl-instagram"></i>
+              <i class="bx bxl-twitter"></i>
+              <i class="bx bxl-pinterest-alt"></i>
+              <i class="bx bxl-youtube"></i>
+            </div>
+            <div class="contact-nav">
+              <p class="pd-b-10">
+                <i class="bx bx-location-plus"></i> Silk St, Barbican, London
+                EC2Y 8DS, UK
+              </p>
+              <p class="pd-b-10"><i class="bx bx-phone"></i> +39-055-123456</p>
+              <p class="pd-b-10">
+                <i class="bx bx-envelope"></i> booking@patiotime.com
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container" style="height: 100%">
+        <div class="d-flex justify-content-center" style="width: 100%">
+          <nav>
+            <div class="container d-flex justify-content-between">
+              <div class="logo">
+                <a href="home.html">
+                  <img
+                    src="https://patiotime.loftocean.com/wp-content/uploads/2022/04/pt-logo.svg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <ul
+                class="color-white d-flex font-20 font-content align-items-center"
+                style="margin-bottom: 0"
+              >
+                <li><a class="color-white" href="menu.html">Menu</a></li>
+                <li class="position-relative introduce">
+                  <p style="margin-bottom: 0">Abouts</p>
+                  <div class="abouts font-nor">
+                    <div class="ab-us pd-b-10 pd-t-10 pd-l-20 border-bot">
+                      <a class="color-white" href="aboutRes.html"
+                        >About Restaurant</a
+                      >
+                    </div>
+                    <div class="ab-cheff pd-b-10 pd-l-20 pd-t-10">
+                      <a class="color-white" href="aboutCheff.html"
+                        >About Cheff</a
+                      >
+                    </div>
+                  </div>
+
+                  <div class="arrow"></div>
+                </li>
+                <li><a class="color-white" href="contact.html">Contact</a></li>
+                <li><a class="color-white" href="blog.html">Blog</a></li>
+                <li class="position-relative introduce">
+                  <i class="bx bx-user"></i>
+                  <div class="abouts font-nor">
+                    <div class="ab-us pd-b-10 pd-t-10 pd-l-20 border-bot">
+                      <a class="color-white" href="aboutRes.html"
+                        >About Restaurant</a
+                      >
+                    </div>
+                    <div class="ab-cheff pd-b-10 pd-l-20 pd-t-10">
+                      <a class="color-white" href="cart.html">My Cart</a>
+                    </div>
+                  </div>
+
+                  <div class="arrow"></div>
+                </li>
+                <li class="none-pd">
+                  <button class="set-btn btn-form">FIND A TABLE</button>
+                </li>
+                <li class="none-pd">
+                  <a class="pimary-color set-btn" href="order.html">
+                    ORDER ONLINE</a
+                  >
+                </li>
+                <li class="font-btn open-nav"><i class="bx bx-menu"></i></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+
+        <div
+          class="header-body d-flex justify-content-center align-items-center"
+        >
+          <div>
+            <div
+              class="text-center title-home-page d-flex justify-content-center align-items-center"
+              data-aos="fade-down"
+              data-aos-duration="1000"
+              data-aos-delay="500"
+            >
+              <div class="line"></div>
+              <h2 class="color-white font-30">CART</h2>
+              <div class="line"></div>
+            </div>
+            <div class="header-body-content">
+              <div
+                class="content-header text-center"
+                data-aos="zoom-in"
+                data-aos-duration="1500"
+                data-aos-delay="1500"
+              >
+                <h1 class="color-white font-50 mg-b-20">
+                  Delicious Food & Wonderful
+                </h1>
+                <h1 class="color-white font-50">Eating Experience</h1>
+                <p class="font-content pd-t-20 color-white font-20">
+                  We Serve Food, Harmony, & Laughter Since 1998
+                </p>
+                <div
+                  class="btn-header color-white d-flex justify-content-center pd-t-30"
+                >
+                  <a class="pimary-color set-btn" href="menu.html">VIEW MENU</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="mg-t-80">
+      <div class="molda">
+        <div class="d-flex justify-content-center align-items-center">
+          <div class="form-table bg-white overflow-hidden">
+            <div
+              class="row align-items-center overflow-hidden"
+              style="--bs-gutter-x: 0rem"
+            >
+              <div class="col-xl-6 none overflow-hidden">
+                <img src="/image/image-form.svg" alt="" />
+              </div>
+              <div class="col-xl-6 col-sm-12 text-center pd-tb-30">
+                <h3 class="font-20 pimary-color font-w pd-t-30">
+                  ONLINE RESERVATION
+                </h3>
+                <h1 class="font-50 font-content color-black pd-t-30">
+                  BOOK A TABLE
+                </h1>
+                <form action="" class="mg-t-20">
+                  <div class="form">
+                    <div class="mg-b-20">
+                      <select
+                        name="persion"
+                        id="persion"
+                        style="font-size: 1.6rem"
+                      >
+                        <option value="">1 Persion</option>
+                        <option value="">2 Persion</option>
+                        <option value="">3 Persion</option>
+                        <option value="">4 Persion</option>
+                        <option value="">5 Persion</option>
+                        <option value="">6 Persion</option>
+                        <option value="">7 Persion</option>
+                      </select>
+                    </div>
+                    <div class="mg-b-20">
+                      <input
+                        class="font-16"
+                        type="date"
+                        name="day"
+                        id="day"
+                        value="30-9-2022"
+                      />
+                    </div>
+                    <div class="mg-b-20">
+                      <select
+                        name="persion"
+                        id="persion"
+                        style="font-size: 1.6rem"
+                      >
+                        <option value="">9h:00</option>
+                        <option value="">9h:30</option>
+                        <option value="">10h:00</option>
+                        <option value="">10h:30</option>
+                        <option value="">11h:00</option>
+                        <option value="">11h:30</option>
+                        <option value="">12h:00</option>
+                        <option value="">12h:30</option>
+                        <option value="">13h:00</option>
+                        <option value="">13h:30</option>
+                        <option value="">14h:30</option>
+                        <option value="">15h:00</option>
+                        <option value="">15h:30</option>
+                        <option value="">14h:00</option>
+                      </select>
+                    </div>
+                    <div class="mg-b-20">
+                      <input
+                        class="font-16"
+                        type="number"
+                        placeholder="Phone number"
+                      />
+                    </div>
+                    <button class="set-btn font-w">BOOK NOW</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <span class="close-btn"><i class="bx bx-x"></i></span>
+      </div>
+      <div class="container" style="--bs-gutter-x: 0rem">
+        <div class="list-dish border">
+          <div
+            class="item-dish d-flex align-items-center justify-content-between flex-colunm"
+          >
+            <img src="/image_order/dish-1-1.svg" alt="" />
+            <p class="font-20">Purple Corn Tostada</p>
+            <div class="count d-flex">
+              <div
+                class="minus font-30 font-w d-flex align-items-center justify-content-center"
+              >
+                <p style="margin: 0">a</p>
+              </div>
+              <div
+                class="count-number d-flex justify-content-center align-items-center"
+              >
+                <p class="color-black font-24" style="margin: 0">1</p>
+              </div>
+              <div
+                class="plus font-30 font-w d-flex align-items-center justify-content-center"
+              >
+                <p class="color-black" style="margin: 0">+</p>
+              </div>
+            </div>
+            <div class="total font-20">total:$29</div>
+            <i class="font-50 bx bx-x-circle"></i>
+          </div>
+
+          <div
+            class="item-dish d-flex align-items-center justify-content-between flex-colunm"
+          >
+            <img src="/image_order/dish-1-1.svg" alt="" />
+            <p class="font-20">Purple Corn Tostada</p>
+            <div class="count d-flex">
+              <div
+                class="minus font-30 font-w d-flex align-items-center justify-content-center"
+              >
+                <p style="margin: 0">a</p>
+              </div>
+              <div
+                class="count-number d-flex justify-content-center align-items-center"
+              >
+                <p class="color-black font-24" style="margin: 0">1</p>
+              </div>
+              <div
+                class="plus font-30 font-w d-flex align-items-center justify-content-center"
+              >
+                <p class="color-black" style="margin: 0">+</p>
+              </div>
+            </div>
+            <div class="total font-20">total:$29</div>
+            <i class="font-50 bx bx-x-circle"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mg-t-80" style="--bs-gutter-x: 0rem">
+        <div class="row" style="--bs-gutter-x: 0rem">
+          <div class="col-xl-6 none">
+            <p class="font-20 font-nor">You may be interested in…</p>
+            <div class="row" style="--bs-gutter-x: 1.5rem">
+              <div class="col-xl-6">
+                <div class="pd-lr-20 pointer">
+                  <div class="overflow-hidden position-relative dish-item">
+                    <img src="/image_order/dish-1-2.svg" alt="" />
+                    <button class="add-cart-btn">ADD TO CARD</button>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between font-16 font-nor mg-t-10"
+                  >
+                    <div class="name-dish">
+                      <p>Purple Corn Tostada</p>
+                    </div>
+                    <div class="price">$30</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6">
+                <div class="pd-lr-20 pointer">
+                  <div class="overflow-hidden position-relative dish-item">
+                    <img src="/image_order/dish-1-3.svg" alt="" />
+                    <button class="add-cart-btn">ADD TO CARD</button>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between font-16 font-nor mg-t-10"
+                  >
+                    <div class="name-dish">
+                      <p>Fresh Oysters Dozen</p>
+                    </div>
+                    <div class="price">$36</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <div class="pd-lr-20">
+              <p class="font-nor font-20 pimary-color">Cart totals</p>
+              <div class="form-order border font-20">
+                <div class="row" style="--bs-gutter-x: 0rem">
+                  <div class="col-xl-5 col-5">
+                    <div class="form-order-left">
+                      <p class="font-w">Subtotal</p>
+                      <p class="font-w">Shipping</p>
+                    </div>
+                  </div>
+                  <div class="col-xl-7 col-7">
+                    <div class="form-order-right">
+                      <p>$55.00</p>
+                      <p>Flat rate $9.00</p>
+                      <p class="mg-b-20">Address</p>
+                      <form action="">
+                        <select name="" id="">
+                          <option value="">City</option>
+                        </select>
+
+                        <select name="" id="">
+                          <option value="">Provinces</option>
+                        </select>
+
+                        <select name="" id="">
+                          <option value="">Pistrict</option>
+                        </select>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="row" style="--bs-gutter-x: 0rem">
+                  <div class="col-xl-5 col-5">
+                    <div class="font-20 font-w font-nor form-order-left">
+                      <p class="pd-b-20" style="margin: 0">Total</p>
+                      <p class="font-16">Choose A Payment Method</p>
+                    </div>
+                  </div>
+                  <div class="col-xl-7 col-7">
+                    <div class="form-order-right">
+                      <p style="margin: 0" class="font-w pd-b-20">$64</p>
+                      <div class="d-flex choose">
+                        <input type="radio" name="pay" id="radio-1" />
+                        <label class="pd-l-20" for="radio-1">
+                          Cash Payment
+                        </label>
+                      </div>
+
+                      <div class="d-flex choose">
+                        <input type="radio" name="pay" id="radio-1" />
+                        <label class="pd-l-20" for="radio-1">
+                          Bank Transfer
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="set-btn mg-t-20 text-center btn-order">Order</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="mg-t-80">
+      <div class="container" style="--bs-gutter-x: 0rem">
+        <div class="row align-items-top" style="--bs-gutter-x: 0rem">
+          <div class="col-xl-4 pd-b-30 col-sm-12">
+            <div class="pd-lr-20">
+              <h2 class="font-30 font-content">Patio.Time</h2>
+              <p class="font-16 font-nor mg-t-20">
+                Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
+                arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+              </p>
+              <div class="icons font-20 mg-t-20">
+                <i class="bx bxl-facebook-circle"></i>
+                <i class="bx bxl-instagram"></i>
+                <i class="bx bxl-twitter"></i>
+                <i class="bx bxl-pinterest-alt"></i>
+                <i class="bx bxl-youtube"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 pd-b-30 col-sm-12">
+            <div class="pd-lr-20">
+              <h2 class="font-24">WORKING HOURS</h2>
+              <div class="time-work font-16 font-nor mg-t-20">
+                <div class="d-flex justify-content-between">
+                  <p>Monday - Friday</p>
+                  <p>09:00 - 22:00</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p>Saturday</p>
+                  <p>11:00 -00:00</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p>Sunday</p>
+                  <p>11:00 - 23:00</p>
+                </div>
+                <div class="d-flex justify-content-between mg-t-20">
+                  <p>* Happy hour</p>
+                  <p>17:00 - 21:00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 pd-b-30 col-sm-12">
+            <div class="pd-lr-20">
+              <h2 class="font-24">OUR ADDRESS</h2>
+              <div class="time-work font-16 font-nor mg-t-20 contact-home">
+                <p class="pd-b-20">
+                  <i class="bx bx-location-plus"></i> Silk St, Barbican, London
+                  EC2Y 8DS, UK
+                </p>
+                <p class="pd-b-20">
+                  <i class="bx bx-phone"></i> +39-055-123456
+                </p>
+                <p class="pd-b-20">
+                  <i class="bx bx-envelope"></i> booking@patiotime.com
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="/js/cart.js" type="module"></script>
+</html>

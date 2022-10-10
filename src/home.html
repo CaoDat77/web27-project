@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>T Fruit</title>
+    <title>Home Page</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body style="background: #221e1e; color: white">
     <header>
@@ -150,9 +151,9 @@
                   <button class="set-btn btn-form">FIND A TABLE</button>
                 </li>
                 <li class="none-pd">
-                  <button class="set-btn">
-                    <a class="pimary-color" href="order.html"> ORDER ONLINE</a>
-                  </button>
+                  <a class="pimary-color set-btn" href="order.html">
+                    ORDER ONLINE</a
+                  >
                 </li>
                 <li class="font-btn open-nav"><i class="bx bx-menu"></i></li>
               </ul>
@@ -191,9 +192,7 @@
                 <div
                   class="btn-header color-white d-flex justify-content-center pd-t-30"
                 >
-                  <button class="set-btn font-w">
-                    <a class="pimary-color" href="menu.html">VIEW MENU</a>
-                  </button>
+                  <a class="pimary-color set-btn" href="menu.html">VIEW MENU</a>
                 </div>
               </div>
             </div>
@@ -411,7 +410,7 @@
                     class="d-flex justify-content-between font-20 font-content"
                   >
                     <div class="name-dish">Crispy Skin Chicken</div>
-                    <div class="price-dish">$25</div>
+                    <div class="price-dish">$29</div>
                   </div>
                   <div class="decs-dish">
                     <p class="font-nor font-16">
@@ -437,7 +436,7 @@
                     class="d-flex justify-content-between font-20 font-content"
                   >
                     <div class="name-dish">Ebony Fillet Steak</div>
-                    <div class="price-dish">$59</div>
+                    <div class="price-dish">$58</div>
                   </div>
                   <div class="decs-dish">
                     <p class="font-nor font-16">Truffle mash, pepper sauce.</p>
@@ -471,7 +470,7 @@
                     class="d-flex justify-content-between font-20 font-content"
                   >
                     <div class="name-dish">Prickly Pear Tonic</div>
-                    <div class="price-dish">$36</div>
+                    <div class="price-dish">$12</div>
                   </div>
                   <div class="decs-dish">
                     <p class="font-nor font-16">
@@ -484,7 +483,7 @@
                     class="d-flex justify-content-between font-20 font-content"
                   >
                     <div class="name-dish">Tommy's Margarita</div>
-                    <div class="price-dish">$30</div>
+                    <div class="price-dish">$12</div>
                   </div>
                   <div class="decs-dish">
                     <p class="font-nor font-16">
@@ -497,7 +496,7 @@
                     class="d-flex justify-content-between font-20 font-content"
                   >
                     <div class="name-dish">Chicha Morada</div>
-                    <div class="price-dish">$59</div>
+                    <div class="price-dish">$16</div>
                   </div>
                   <div class="decs-dish">
                     <p class="font-nor font-16">
@@ -510,7 +509,7 @@
                     class="d-flex justify-content-between font-20 font-content"
                   >
                     <div class="name-dish">Better Boy</div>
-                    <div class="price-dish">$18</div>
+                    <div class="price-dish">$10</div>
                   </div>
                   <div class="decs-dish">
                     <p class="font-nor font-16">
@@ -524,18 +523,10 @@
         </div>
         <div class="d-flex gap-20 justify-content-center pd-b-100">
           <div data-aos="fade-right" data-aos-duration="2000">
-            <div class="btn-view-menu">
-              <button class="set-btn">
-                <a class="pimary-color" href="menu.html"> VIEW MENUS </a>
-              </button>
-            </div>
+            <a class="pimary-color set-btn" href="menu.html"> VIEW MENUS </a>
           </div>
           <div data-aos="fade-left" data-aos-duration="2000">
-            <div class="btn-order">
-              <button class="set-btn">
-                <a class="pimary-color" href="order.html"> ORDER ONLINE</a>
-              </button>
-            </div>
+            <a class="pimary-color set-btn" href="order.html"> ORDER ONLINE</a>
           </div>
         </div>
 
@@ -585,11 +576,9 @@
                 </p>
               </div>
               <div class="pd-t-30">
-                <button class="set-btn">
-                  <a class="pimary-color" href="aboutCheff.html">
-                    LEARN MORE
-                  </a>
-                </button>
+                <a class="pimary-color set-btn" href="aboutCheff.html">
+                  LEARN MORE
+                </a>
               </div>
             </div>
           </div>
@@ -621,11 +610,9 @@
                 <p>T: +39 055 1234567</p>
               </div>
               <div class="pd-t-30">
-                <button class="set-btn">
-                  <a class="pimary-color" href="contact.html">
-                    GET DIRECTIONS
-                  </a>
-                </button>
+                <a class="pimary-color set-btn" href="contact.html">
+                  GET DIRECTIONS
+                </a>
               </div>
             </div>
           </div>
@@ -726,5 +713,9 @@
       </div>
     </footer>
   </body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="/js/home.js" type="module"></script>
 </html>
