@@ -413,9 +413,7 @@ img:hover {
 .big-post img:hover {
   transform: scale(1);
 }
-*/ .over-hidden {
-  overflow: hidden;
-}
+
 
 li {
   transition: 0.4s;
