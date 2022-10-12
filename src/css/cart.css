@@ -636,6 +636,10 @@ a {
   gap: 0.8rem;
 }
 
+.item-dish img {
+  width: 10%;
+}
+
 .add-cart-btn {
   position: absolute;
   width: 70%;

@@ -66,98 +66,140 @@ function scrollFunction() {
 
 const menus = [
   {
+    id: 1,
     img: "/image_order/dish-1-1.svg",
     title: "Purple Corn Tostada",
     price: 36,
   },
 
   {
+    id: 2,
     img: "/image_order/dish-1-2.svg",
     title: "Bruno's Scribble",
     price: 30,
   },
 
   {
+    id: 3,
     img: "/image_order/dish-1-3.svg",
     title: "Fresh Oysters Dozen",
     price: 59,
   },
 
   {
+    id: 4,
     img: "/image_order/dish-1-4.svg",
     title: "Wild Mushroom Arancini",
     price: 18,
   },
 
   {
+    id: 5,
     img: "/image_order/dish-2-1.svg",
     title: "Ebony Rib Fillet Steak",
     price: 58,
   },
 
   {
+    id: 6,
     img: "/image_order/dish-2-2.svg",
     title: "Flank Steak",
     price: 30,
   },
 
   {
+    id: 7,
     img: "/image_order/dish-2-3.svg",
     title: "Crispy Skin Chicken",
     price: 29,
   },
 
   {
+    id: 8,
     img: "/image_order/dish-2-4.svg",
     title: "Pan Fried Barramundi",
     price: 38,
   },
 
   {
+    id: 9,
     img: "/image_order/dish-3-1.svg",
-    title: "Beer Battered Fish & Chips",
+    title: "Beer Battered Fish",
     price: 42,
   },
 
   {
+    id: 10,
     img: "/image_order/dish-3-2.svg",
     title: "Blue Eyed Cod",
     price: 18,
   },
 
   {
+    id: 11,
     img: "/image_order/dish-3-3.svg",
     title: "Blueberry Beef",
     price: 25,
   },
 
   {
+    id: 12,
     img: "/image_order/dish-3-4.svg",
     title: "Peach Salad",
     price: 15,
   },
 
   {
+    id: 13,
     img: "/image_order/dish-4-1.svg",
     title: "Prickly Pear Tonic",
     price: 12,
   },
 
   {
+    id: 14,
     img: "/image_order/dish-4-2.svg",
     title: "Chicha Morada",
     price: 12,
   },
 
   {
+    id: 15,
     img: "/image_order/dish-4-3.svg",
     title: "Better Boy",
     price: 16,
   },
 
   {
+    id: 16,
     img: "/image_order/dish-4-4.svg",
     title: "Tommy's Margarita",
     price: 10,
   },
 ];
+
+const btnAddCart = document.querySelectorAll(".add-cart-btn");
+btnAddCart.forEach(function (button, index) {
+  button.addEventListener("click", function (e) {
+    {
+      const btnItem = e.target;
+      const product = btnItem.parentElement.parentElement;
+      const productImg = product.querySelector("img").src;
+      const productName = product.querySelector(".name-dish").innerText;
+      const productPrice = product.querySelector(".price").innerText;
+
+      console.log(productPrice);
+      console.log(productName);
+      console.log(productImg);
+
+      const item = {
+        productImg,
+        productName,
+        productPrice,
+      };
+
+      const json = JSON.stringify(item);
+      localStorage.setItem("dish", json);
+    }
+  });
+});
