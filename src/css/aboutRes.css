@@ -389,9 +389,6 @@ img {
   object-fit: cover;
 }
 
-.over-hidden {
-  overflow: hidden;
-}
 
 li {
   transition: 0.4s;
