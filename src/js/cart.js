@@ -63,3 +63,64 @@ function scrollFunction() {
     document.querySelector("nav").style.marginTop = "5rem";
   }
 }
+
+/* <div class="item-dish d-flex align-items-center justify-content-between flex-colunm">
+  <img src="/image_order/dish-1-1.svg" alt="" />
+  <p class="font-20">Purple Corn Tostada</p>
+  <div class="count d-flex">
+    <div class="minus font-30 font-w d-flex align-items-center justify-content-center">
+      <p style="margin: 0">a</p>
+    </div>
+    <div class="count-number d-flex justify-content-center align-items-center">
+      <p class="color-black font-24" style="margin: 0">
+        1
+      </p>
+    </div>
+    <div class="plus font-30 font-w d-flex align-items-center justify-content-center">
+      <p class="color-black" style="margin: 0">
+        +
+      </p>
+    </div>
+  </div>
+  <div class="total font-20">total:$29</div>
+  <i class="font-50 bx bx-x-circle"></i>
+</div>; */
+
+const list = document.querySelector(".list-dish");
+function renderItem() {
+  const haha = localStorage.getItem("dish");
+  const hihi = JSON.parse(haha);
+  let productName = hihi.productName;
+
+  console.log(productName);
+
+  let html = () => {
+    return `
+       <div class="item-dish d-flex align-items-center justify-content-between flex-colunm">
+  <img src=${productImage} alt="" />
+  <p class="font-20">${productName}</p>
+  <div class="count d-flex">
+    <div class="minus font-30 font-w d-flex align-items-center justify-content-center">
+      <p style="margin: 0">a</p>
+    </div>
+    <div class="count-number d-flex justify-content-center align-items-center">
+      <p class="color-black font-24" style="margin: 0">
+        1
+      </p>
+    </div>
+    <div class="plus font-30 font-w d-flex align-items-center justify-content-center">
+      <p class="color-black" style="margin: 0">
+        +
+      </p>
+    </div>
+  </div>
+  <div class="total font-20">total:$${hihi.productPrice}</div>
+  <i class="font-50 bx bx-x-circle"></i>
+</div>; 
+    `;
+  };
+
+  list.innerHTML = html;
+}
+
+renderItem();

@@ -7,7 +7,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        index: resolve(__dirname, "src/home.html"),
+        index: resolve(__dirname, "src/index.html"),
         aboutRes: resolve(__dirname, "src/aboutRes.html"),
         aboutCheff: resolve(__dirname, "src/aboutCheff.html"),
         menu: resolve(__dirname, "src/menu.html"),
