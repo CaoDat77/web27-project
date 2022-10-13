@@ -178,28 +178,22 @@ const menus = [
   },
 ];
 
-const btnAddCart = document.querySelectorAll(".add-cart-btn");
-btnAddCart.forEach(function (button, index) {
-  button.addEventListener("click", function (e) {
-    {
+function addCart() {
+  const listDish = [];
+  const btnAddCart = document.querySelectorAll(".add-cart-btn");
+  btnAddCart.forEach(function (button, index) {
+    button.addEventListener("click", function (e) {
       const btnItem = e.target;
       const product = btnItem.parentElement.parentElement;
       const productImg = product.querySelector("img").src;
       const productName = product.querySelector(".name-dish").innerText;
       const productPrice = product.querySelector(".price").innerText;
 
-      console.log(productPrice);
-      console.log(productName);
-      console.log(productImg);
-
-      const item = {
-        productImg,
-        productName,
-        productPrice,
-      };
-
-      const json = JSON.stringify(item);
-      localStorage.setItem("dish", json);
-    }
+      listDish.push({ productImg, productName, productPrice });
+      console.log(listDish);
+      const toJson = JSON.stringify(listDish);
+      localStorage.setItem("key", toJson);
+    });
   });
-});
+}
+addCart();
