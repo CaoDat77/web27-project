@@ -178,7 +178,7 @@ const menus = [
   },
 ];
 
-function addCart() {
+ function addCart() {
   const listDish = [];
   const btnAddCart = document.querySelectorAll(".add-cart-btn");
   btnAddCart.forEach(function (button, index) {

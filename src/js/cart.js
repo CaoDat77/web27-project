@@ -64,14 +64,14 @@ function scrollFunction() {
   }
 }
 
+const list = document.querySelector(".list-dish");
+const res = localStorage.getItem("key");
+const infos = JSON.parse(res);
 function renderItem() {
-  const list = document.querySelector(".list-dish");
-  const res = localStorage.getItem("key");
-  const infos = JSON.parse(res);
   const html = infos.map((info) => {
     return `
        <div
-            class="row justify-content-between align-items-center"
+            class="row justify-content-between align-items-center pd-b-20"
             style="--bs-gutter-x: 0rem"
           >
             <div class="col-xl-3">
@@ -84,13 +84,13 @@ function renderItem() {
             </div>
             <div class="col-xl-3">
               <div class="d-flex count justify-content-center">
-                <button class="font-30">
+                <button class="font-30 btn-down">
                   <p style="margin-bottom: 0">-</p>
                 </button>
-                <div class="number-count font-30 text-center">
-                  <p style="margin-bottom: 0">1</p>
+                <div class=" number-count font-30 text-center">
+                  <p class="number" style="margin-bottom: 0">1</p>
                 </div>
-                <button class="font-30">
+                <button class="font-30 btn-up">
                   <p style="margin-bottom: 0">+</p>
                 </button>
               </div>
@@ -99,63 +99,77 @@ function renderItem() {
               <div
                 class="d-flex justify-content-between align-items-center flex-colunm"
               >
-                <div class="total d-flex font-20 pd-tb-10">
+                <div class=" d-flex font-20 pd-tb-10">
                   <p style="margin-bottom: 0">Total:</p>
-                  <p style="margin-bottom: 0">$ ${info.producPrice}</p>
+                  <p class="total" style="margin-bottom: 0"> $${info.productPrice}</p>
                 </div>
-                <i class="bx bx-x-circle font-50"></i>
+                <div class="btn-delete">
+                  <i class="bx bx-x-circle font-50"></i>
+                </div>
+                
               </div>
             </div>
           </div>
- 
       `;
   });
   const htmls = html.join("");
   list.innerHTML = htmls;
 }
+renderItem();
 
-// function countUp() {
-//   let a = 1;
-//   const btnUp = document.querySelector(".plus");
-//   const btnDown = document.querySelector(".minus");
-//   const numberCount = document.querySelector(".count-number");
+function countUp() {
+  let a = 1;
+  const btnUp = document.querySelector(".btn-up");
+  const btnDown = document.querySelector(".btn-down");
+  const numberCount = document.querySelector(".number");
 
-//   btnUp.addEventListener("click", () => {
-//     numberCount.innerHTML = ++a;
-//     console.log(a);
-//   });
+  btnUp.addEventListener("click", () => {
+    console.log(a);
+    numberCount.innerHTML = ++a;
+  });
 
-//   btnDown.addEventListener("click", () => {
-//     console.log(a);
-//     if (a > 1) {
-//       numberCount.innerHTML = --a;
-//     } else {
-//       return false;
-//     }
-//   });
-// }
-// countUp();
+  btnDown.addEventListener("click", () => {
+    if (a > 1) {
+      numberCount.innerHTML = --a;
+    } else {
+      return false;
+    }
+  });
+}
 
-// <div class="item-dish d-flex align-items-center justify-content-between flex-colunm">
-//     <img src=${productImg} alt="" />
-//     <p class="font-20">${productName}</p>
-// <div class="count d-flex">
-//     <div
-//       class="minus font-50 font-w d-flex align-items-center justify-content-center"
-//     >
-//       <button>-</button>
-//     </div>
-//     <div
-//        class="color-black font-30 count-number d-flex justify-content-center align-items-center"
-//     >
-//        1
-//     </div>
-//    <div
-//     class="plus font-30 font-w d-flex align-items-center justify-content-center"
-//     >
-//       <button>+</button>
-//     </div>
-//  </div>
-// <div class="total font-20">total:${productPrice}</div>
-//       <i class="font-50 bx bx-x-circle"></i>
-// </div> ;
+function countUpCart() {
+  const counts = document.querySelectorAll(".count");
+  counts.forEach((count) => {
+    count.addEventListener("click", function (e) {
+      let a = 1;
+      const btnCount = e.target;
+      const product = btnCount.parentElement.parentElement;
+      const btnUp = product
+        .querySelector(".btn-up")
+        .addEventListener("click", countUp);
+      const numberCount = product.querySelector(".number");
+      const btnDown = product.querySelector(".btn-down");
+
+      function countUp() {
+        numberCount.innerHTML = ++a;
+      }
+    });
+  });
+}
+countUpCart();
+
+function removeCart() {
+  const btnDels = document.querySelectorAll(".btn-delete");
+  btnDels.forEach((btnDel, index) => {
+    btnDel.addEventListener("click", () => {
+      let listDish = localStorage.getItem("key");
+      let data = JSON.parse(listDish);
+      data.splice(index, 1);
+      localStorage.setItem("key", JSON.stringify(data));
+      renderItem();
+      console.log(index);
+    });
+  });
+}
+
+removeCart();
