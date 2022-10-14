@@ -418,7 +418,7 @@ li a:hover {
 
 .book-table {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("./image/image-book-table.svg");
+    url("/image/image-book-table.svg");
 }
 
 .form {
