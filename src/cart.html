@@ -294,9 +294,7 @@
         <span class="close-btn"><i class="bx bx-x"></i></span>
       </div>
       <div class="container" style="--bs-gutter-x: 0rem">
-        <div class="list-dish">
-        
-        </div>
+        <div class="list-dish"></div>
       </div>
 
       <div class="container mg-t-80" style="--bs-gutter-x: 0rem">
@@ -351,22 +349,39 @@
                   </div>
                   <div class="col-xl-7 col-7">
                     <div class="form-order-right">
-                      <p>$55.00</p>
+                      <p class="Subtotal">$55.00</p>
                       <p>Flat rate $9.00</p>
                       <p class="mg-b-20">Address</p>
-                      <form action="">
-                        <select name="" id="">
-                          <option value="">City</option>
-                        </select>
+                      <div class="form-group">
+                        <div class="form-field">
+                          <label for="province">Thành phố</label>
+                          <select
+                            name="province"
+                            id="province"
+                            class="form-control"
+                          >
+                            <option>Tỉnh/thành phố</option>
+                          </select>
+                        </div>
 
-                        <select name="" id="">
-                          <option value="">Provinces</option>
-                        </select>
+                        <div class="form-field">
+                          <label for="district">Quận huyện</label>
+                          <select
+                            name="district"
+                            id="district"
+                            class="form-control"
+                          >
+                            <option>Quận/huyện</option>
+                          </select>
+                        </div>
 
-                        <select name="" id="">
-                          <option value="">Pistrict</option>
-                        </select>
-                      </form>
+                        <div class="form-field">
+                          <label for="ward">Phường xã</label>
+                          <select name="ward" id="ward" class="form-control">
+                            <option>Phường/xã</option>
+                          </select>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

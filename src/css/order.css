@@ -179,6 +179,10 @@ header {
   margin-bottom: 8rem;
 }
 
+.font-14 {
+  font-size: 1.4rem;
+}
+
 .font-16 {
   font-size: 1.6rem;
 }
@@ -560,6 +564,23 @@ option {
   border-bottom: 1px solid #333;
 }
 
+.add-cart-mobile-btn {
+  display: none;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  padding: 1rem 2rem;
+}
+
+.cart-mobile i {
+  display: none;
+  color: var(--primary-color);
+  font-size: 3rem;
+  padding: 0.6rem;
+  border: #e3c731 2px solid;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 576px) {
   li {
     display: none;
@@ -593,6 +614,10 @@ option {
 
   .add-cart-btn {
     display: none;
+  }
+
+  .cart-mobile i {
+    display: block;
   }
 }
 
@@ -651,14 +676,6 @@ option {
 .dish-item:hover img {
   opacity: 0.6;
   transition: 0.5s;
-}
-
-.add-cart-mobile-btn {
-  display: none;
-  width: 100%;
-  border: 2px solid var(--primary-color);
-  border-radius: 10px;
-  padding: 1rem 2rem;
 }
 
 .pointer {

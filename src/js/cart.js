@@ -67,7 +67,9 @@ function scrollFunction() {
 const list = document.querySelector(".list-dish");
 const res = localStorage.getItem("key");
 const infos = JSON.parse(res);
+
 function renderItem() {
+  removeCart();
   const html = infos.map((info) => {
     return `
        <div
@@ -100,7 +102,7 @@ function renderItem() {
                 class="d-flex justify-content-between align-items-center flex-colunm"
               >
                 <div class=" d-flex font-20 pd-tb-10">
-                  <p style="margin-bottom: 0">Total:</p>
+                  <p style="margin-bottom: 0">Price:</p>
                   <p class="total" style="margin-bottom: 0"> $${info.productPrice}</p>
                 </div>
                 <div class="btn-delete">
@@ -112,11 +114,11 @@ function renderItem() {
           </div>
       `;
   });
+
   const htmls = html.join("");
   list.innerHTML = htmls;
 }
 renderItem();
-
 function countUp() {
   let a = 1;
   const btnUp = document.querySelector(".btn-up");
@@ -161,15 +163,96 @@ countUpCart();
 function removeCart() {
   const btnDels = document.querySelectorAll(".btn-delete");
   btnDels.forEach((btnDel, index) => {
-    btnDel.addEventListener("click", () => {
+    btnDel.addEventListener("click", (e) => {
+      let dish = e.target;
+      let infoDish =
+        dish.parentElement.parentElement.parentElement.parentElement;
+      infoDish.remove();
+      console.log(infoDish);
       let listDish = localStorage.getItem("key");
       let data = JSON.parse(listDish);
-      data.splice(index, 1);
-      localStorage.setItem("key", JSON.stringify(data));
-      renderItem();
       console.log(index);
+      data.splice(infoDish);
+      localStorage.setItem("key", JSON.stringify(data));
+      console.log(data);
     });
   });
 }
-
 removeCart();
+
+function totalMonney() {
+  const subTotal = document.querySelector(".Subtotal");
+  const totol = infos.reduce((total, info) => {
+    let result = (total += Number(info.productPrice));
+    return result;
+  }, 0);
+  subTotal.innerHTML = `$${totol}`;
+}
+totalMonney();
+
+function localTion() {
+  const PROVINCE_API = "https://provinces.open-api.vn/api/";
+  const DISTRICT_API = "https://provinces.open-api.vn/api/p/";
+  const WARD_API = "https://provinces.open-api.vn/api/d/";
+
+  const getProvinces = () => fetch(PROVINCE_API).then((res) => res.json());
+
+  const getDistricts = (code) =>
+    fetch(DISTRICT_API + code + "?depth=2").then((res) => res.json());
+
+  const getWards = (code) =>
+    fetch(WARD_API + code + "?depth=2").then((res) => res.json());
+
+  const createOption = ({ name, code }) => {
+    const opt = document.createElement("option");
+    opt.text = name;
+    opt.value = code;
+    return opt;
+  };
+
+  const provinceEl = document.getElementById("province");
+  const districtEl = document.getElementById("district");
+  const wardEl = document.getElementById("ward");
+
+  window.onload = async () => {
+    try {
+      const provinces = await getProvinces();
+
+      const options = provinces.map(createOption);
+
+      provinceEl.append(...options);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  provinceEl.onchange = async (e) => {
+    const proviceCode = e.target.value;
+
+    try {
+      const districts = await getDistricts(proviceCode);
+
+      const options = districts.districts.map(createOption);
+
+      districtEl.append(...options);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  districtEl.onchange = async (e) => {
+    const districtCode = e.target.value;
+
+    try {
+      const wards = await getWards(districtCode);
+
+      const options = wards.wards.map(createOption);
+
+      wardEl.append(...options);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+}
+
+localTion();

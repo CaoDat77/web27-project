@@ -250,8 +250,34 @@ nav {
   bottom: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.8);
-
   display: none;
+}
+
+.molda-account {
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  /* display: none; */
+}
+
+.form-user {
+  width: 30%;
+  transform: translateY(20%);
+  background-color: white;
+  padding: 2rem 3rem;
+}
+
+.form-user div label {
+  font-size: 2rem;
+}
+
+.form-user div input {
+  font-size: 1.6rem;
+  padding: 0.5rem 1rem;
 }
 
 button {
@@ -540,6 +566,10 @@ a {
 @media screen and (max-width: 576px) {
   li {
     display: none;
+  }
+
+  .form-user {
+    width: 100%;
   }
 
   .pd-none {

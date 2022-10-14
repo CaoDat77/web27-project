@@ -443,6 +443,7 @@ select {
   outline: none;
   border-bottom: 1px solid #999;
   background: transparent;
+  font-size: 1.6rem;
 }
 
 option {
@@ -532,6 +533,10 @@ a {
 .none-pd:hover {
   padding: unset !important;
   border: none;
+}
+
+.form-control {
+  font-size: 1.6rem !important;
 }
 
 @media screen and (max-width: 576px) {
@@ -681,12 +686,6 @@ a {
 
 .form-order-right {
   padding: 1.6rem 2.4rem;
-}
-
-.form-order-right form select {
-  color: white;
-  margin-bottom: 2rem;
-  font-size: 1.6rem;
 }
 
 .choose input {
