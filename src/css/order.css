@@ -79,6 +79,10 @@ header {
   margin: 2rem 0;
 }
 
+.mg-x-20 {
+  margin: 2rem;
+}
+
 .mg-t-40 {
   margin-top: 4rem;
 }
@@ -698,4 +702,20 @@ option {
 
 .pd-x-20 {
   padding: 2rem;
+}
+
+.number-page p {
+  text-align: center;
+  border: 1px solid #999;
+  width: 4rem;
+  height: 4rem;
+  line-height: 4rem;
+  border-radius: 50%;
+  transition: 0.5s;
+  margin: 0 1.6rem;
+}
+
+.number-page p:hover {
+  background-color: var(--primary-color);
+  border: none;
 }

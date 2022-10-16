@@ -14,6 +14,13 @@ const aboutBtn = document.querySelector(".introduce-nav");
 const navAbout = document.querySelector(".abouts-nav");
 const accountNav = document.querySelector(".account-nav");
 const listAcc = document.querySelector(".accounts");
+const showForms = document.querySelectorAll(".show-form");
+
+showForms.forEach((showForm) => {
+  showForm.addEventListener("click", () => {
+    document.querySelector(".molda-account").style.display = "block";
+  });
+});
 
 function showMolda() {
   molda.style.display = "block";
@@ -28,7 +35,9 @@ btnForms.forEach((btn) => {
 });
 
 btnClose.addEventListener("click", closeMolda);
-
+btnClose.addEventListener("click", function () {
+  document.querySelector(".molda-account").style.display = "none";
+});
 btnMoldaMoblie.addEventListener("click", function () {
   moldaMobile.style.display = "block";
 });
@@ -63,3 +72,25 @@ function scrollFunction() {
     document.querySelector("nav").style.marginTop = "5rem";
   }
 }
+
+const form = document.querySelector("form");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const userName = document.querySelector("#user");
+  const password = document.querySelector("#password");
+  const email = document.querySelector("#email");
+  const cfpassword = document.querySelector("#cfpassword");
+  const textInput = document.querySelectorAll(".text-input");
+
+  const user = {
+    userName: userName.value,
+    password: password.value,
+    email: email.value,
+    cfpassword: cfpassword.value,
+  };
+
+  const json = JSON.stringify(user);
+  localStorage.setItem(userName, json);
+  alert("Đăng kí thành công");
+});

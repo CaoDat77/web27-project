@@ -69,7 +69,7 @@
 
               <div class="accounts">
                 <div class="font-16">
-                  <a class="color-white" href="account.html">My Account</a>
+                  <a class="color-white show-form" href="account.html">My Account</a>
                 </div>
                 <div class="font-16">
                   <a class="color-white" href="cart.html">My Cart</a>
@@ -136,7 +136,7 @@
                   <i class="bx bx-user"></i>
                   <div class="abouts font-nor">
                     <div class="ab-us pd-b-10 pd-t-10 pd-l-20 border-bot">
-                      <a class="color-white">My Account</a>
+                      <a class="color-white show-form">My Account</a>
                     </div>
                     <div class="ab-cheff pd-b-10 pd-l-20 pd-t-10">
                       <a class="color-white" href="cart.html">My Cart</a>
@@ -202,49 +202,61 @@
       <div class="molda-account">
         <div class="d-flex justify-content-center align-items-center">
           <div class="form-user color-black">
-            <div class="mg-tb-20">
+            <div
+              class="mg-tb-20 d-flex justify-content-between align-items-center"
+            >
+              <img
+                src="https://patiotime.loftocean.com/wp-content/uploads/2022/04/pt-logo.svg"
+                alt=""
+                class="logo-form"
+              />
               <h2 class="font-30 pimary-color">Register</h2>
             </div>
-            <div class="pd-b-10">
-              <label for="username">User Name</label>
-              <input
-                type="text"
-                name="user"
-                id="user"
-                placeholder="Enter Your User Name"
-              />
-              <p></p>
-            </div>
-            <div class="pd-b-10">
-              <label for="password">Password</label>
-              <input
-                type="password"
-                name="password"
-                id="password"
-                placeholder="Enter Your Password"
-              />
-              <p></p>
-            </div>
-            <div class="pd-b-10">
-              <label for="password">Comfirm Password</label>
-              <input
-                type="password"
-                name="password"
-                id="cfpassword"
-                placeholder="Comfirm Your Password"
-              />
-              <p></p>
-            </div>
-            <div class="pd-b-10">
-              <label for="email">Email</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Enter Your Email"
-              />
-              <p></p>
-            </div>
+            <form>
+              <div class="pd-b-10">
+                <label class="color-white" for="username">User Name</label>
+                <input
+                  type="text"
+                  name="user"
+                  id="user"
+                  placeholder="Enter Your User Name"
+                />
+                <small class="color-white text-input text-user"></small>
+              </div>
+              <div class="pd-b-10">
+                <label class="color-white" for="password">Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Enter Your Password"
+                />
+                <small class="text-input text-password"></small>
+              </div>
+              <div class="pd-b-10">
+                <label class="color-white" for="password"
+                  >Comfirm Password</label
+                >
+                <input
+                  type="password"
+                  name="password"
+                  id="cfpassword"
+                  placeholder="Comfirm Your Password"
+                />
+                <small class="text-input text-cfpassword"></small>
+              </div>
+              <div class="pd-b-10">
+                <label class="color-white" for="email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Enter Your Email"
+                />
+                <small class="text-input text-email"></small>
+              </div>
+              <button class="set-btn">Register</button>
+            </form>
           </div>
         </div>
 

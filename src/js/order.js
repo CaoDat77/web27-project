@@ -178,7 +178,82 @@ const menus = [
   },
 ];
 
- function addCart() {
+let currentPage = 1;
+let perPage = 8;
+let totalPage = 0;
+let perDish = [];
+
+console.log(menus.length);
+
+async function getDish() {
+  (perDish = menus.slice(
+    (currentPage - 1) * perPage,
+    (currentPage - 1) * perPage + perPage
+  )),
+    renderPageNumber();
+  renderDish();
+}
+getDish();
+
+function renderDish() {
+  let html = perDish.map((value) => {
+    return `
+      <div class="col-xl-3 col-6" id=${value.id}>
+            <div class="pd-x-20">
+              <div class="pointer overflow-hidden position-relative dish-item">
+                
+                  <img src=${value.img} alt="" />
+                
+                <button class="add-cart-btn">ADD TO CARD</button>
+              </div>
+              <div class="font-16 font-nor mg-t-10">
+                <div class="name-dish">${value.title}</div>
+                <div class="d-flex">
+                  <div class="unit">$</div>
+                  <div class="price">${value.price}</div>
+                </div>
+              </div>
+              <div
+                class="cart-mobile d-flex justify-content-between align-items-center"
+              >
+                <button class="add-cart-mobile-btn font-14 pimary-color">
+                  ADD TO CART
+                </button>
+                <i class="bx bx-cart"></i>
+              </div>
+            </div>
+          </div>
+    `;
+  });
+  let htmls = html.join("");
+  const list = (document.querySelector(".list-dish").innerHTML = htmls);
+}
+renderDish();
+
+//--------------------------------------------
+
+function renderPageNumber() {
+  totalPage = menus.length / perPage;
+  for (let i = 1; i <= totalPage; i++) {
+    document.querySelector(
+      ".number-page"
+    ).innerHTML += `<p onclick="handlePageNumber(${i})">${i}</p>`;
+  }
+}
+
+function handlePageNumber(num) {
+  currentPage = num;
+  console.log(currentPage);
+  perUser = menus.slice(
+    (currentPage - 1) * perPage,
+    (currentPage - 1) * perPage + perPage
+  );
+  renderUser();
+}
+
+//------------------------------------------
+
+function addCart() {
   const listDish = [];
   const btnAddCart = document.querySelectorAll(".add-cart-btn");
   btnAddCart.forEach(function (button, index) {
@@ -188,8 +263,14 @@ const menus = [
       const productImg = product.querySelector("img").src;
       const productName = product.querySelector(".name-dish").innerText;
       const productPrice = product.querySelector(".price").innerText;
+      const item = {
+        productImg,
+        productName,
+        productPrice,
+        quantily: 1,
+      };
 
-      listDish.push({ productImg, productName, productPrice });
+      listDish.push(item);
       console.log(listDish);
       const toJson = JSON.stringify(listDish);
       localStorage.setItem("key", toJson);
@@ -197,3 +278,19 @@ const menus = [
   });
 }
 addCart();
+
+const clicks = document.querySelectorAll(".pointer ");
+clicks.forEach((click) => {
+  click.addEventListener("click", (e) => {
+    location.href = "decs.html";
+    let dish = [];
+    let product = e.target;
+    let item = product.parentElement.parentElement;
+    let itemName = item.querySelector(".name-dish").innerText;
+    let itemPrice = item.querySelector(".price").innerText;
+    let itemImg = item.querySelector("img").src;
+    dish.push({ itemName, itemPrice, itemImg });
+    const toJson = JSON.stringify(dish);
+    localStorage.setItem("decs", toJson);
+  });
+});

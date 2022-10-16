@@ -142,6 +142,10 @@ header {
   padding-top: 4rem;
 }
 
+.pd-x-40 {
+  padding: 4rem;
+}
+
 .pd-tb-40 {
   padding: 4rem 0;
 }
@@ -605,6 +609,19 @@ a {
 }
 
 .avatar {
+  width: 10rem;
+  border-radius: 50%;
+}
+
+.bx-wrapper {
+  -moz-box-shadow: 0 0 5px #ccc;
+  -webkit-box-shadow: 0 0 5px #ccc;
+  box-shadow: 0 0 5px #ccc;
+  border: 1px solid rgb(23, 23, 23);
+  background: transparent;
+}
+
+.cus img {
   width: 10rem;
   border-radius: 50%;
 }
