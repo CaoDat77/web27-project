@@ -186,24 +186,26 @@ let perDish = [];
 console.log(menus.length);
 
 async function getDish() {
-  (perDish = menus.slice(
+  perDish = menus.slice(
     (currentPage - 1) * perPage,
     (currentPage - 1) * perPage + perPage
-  )),
-    renderPageNumber();
+  );
+  renderPageNumber();
   renderDish();
 }
 getDish();
-
+// render ra sản phẩm
 function renderDish() {
   let html = perDish.map((value) => {
     return `
       <div class="col-xl-3 col-6" id=${value.id}>
             <div class="pd-x-20">
               <div class="pointer overflow-hidden position-relative dish-item">
-                
-                  <img src=${value.img} alt="" />
-                
+                 <div class ="click-decs">
+                      
+                          <img src=${value.img} alt="" />
+                      
+                 </div>                                                                    
                 <button class="add-cart-btn">ADD TO CARD</button>
               </div>
               <div class="font-16 font-nor mg-t-10">
@@ -227,34 +229,68 @@ function renderDish() {
   });
   let htmls = html.join("");
   const list = (document.querySelector(".list-dish").innerHTML = htmls);
+  clickDecs();
+  addCart();
 }
 renderDish();
-
-//--------------------------------------------
 
 function renderPageNumber() {
   totalPage = menus.length / perPage;
   for (let i = 1; i <= totalPage; i++) {
     document.querySelector(
       ".number-page"
-    ).innerHTML += `<p onclick="handlePageNumber(${i})">${i}</p>`;
+    ).innerHTML += `<p class="btn${i}">${i}</p>`;
   }
 }
+//-------------------------------------------------
+// Chức năng click tao ra trang chi tiết sản phẩm
+function clickDecs() {
+  const clicks = document.querySelectorAll(".click-decs");
+  clicks.forEach((click) => {
+    click.addEventListener("click", (e) => {
+      location.href = "decs.html";
+      let dish = [];
+      let product = e.target;
+      let item = product.parentElement.parentElement.parentElement;
+      let itemName = item.querySelector(".name-dish").innerText;
+      let itemPrice = item.querySelector(".price").innerText;
+      let itemImg = item.querySelector("img").src;
+      dish.push({ itemName, itemPrice, itemImg });
+      const toJson = JSON.stringify(dish);
+      localStorage.setItem("decs", toJson);
+      console.log(dish);
+    });
+  });
+}
+clickDecs();
 
-function handlePageNumber(num) {
-  currentPage = num;
+//---------------------------------------------
+// Chức năng chuyển trang
+const page1 = document.querySelector(".btn1");
+const page2 = document.querySelector(".btn2");
+
+page1.addEventListener("click", function () {
+  currentPage = 1;
   console.log(currentPage);
-  perUser = menus.slice(
+  perDish = menus.slice(
     (currentPage - 1) * perPage,
     (currentPage - 1) * perPage + perPage
   );
-  renderUser();
-}
+  renderDish();
+});
 
-//------------------------------------------
+page2.addEventListener("click", function () {
+  currentPage = 2;
+  console.log(currentPage);
+  perDish = menus.slice(
+    (currentPage - 1) * perPage,
+    (currentPage - 1) * perPage + perPage
+  );
+  renderDish();
+});
 
+const listDish = [];
 function addCart() {
-  const listDish = [];
   const btnAddCart = document.querySelectorAll(".add-cart-btn");
   btnAddCart.forEach(function (button, index) {
     button.addEventListener("click", function (e) {
@@ -269,28 +305,11 @@ function addCart() {
         productPrice,
         quantily: 1,
       };
-
       listDish.push(item);
       console.log(listDish);
       const toJson = JSON.stringify(listDish);
       localStorage.setItem("key", toJson);
+      alert("Đã thêm vào giỏ hàng");
     });
   });
 }
-addCart();
-
-const clicks = document.querySelectorAll(".pointer ");
-clicks.forEach((click) => {
-  click.addEventListener("click", (e) => {
-    location.href = "decs.html";
-    let dish = [];
-    let product = e.target;
-    let item = product.parentElement.parentElement;
-    let itemName = item.querySelector(".name-dish").innerText;
-    let itemPrice = item.querySelector(".price").innerText;
-    let itemImg = item.querySelector("img").src;
-    dish.push({ itemName, itemPrice, itemImg });
-    const toJson = JSON.stringify(dish);
-    localStorage.setItem("decs", toJson);
-  });
-});

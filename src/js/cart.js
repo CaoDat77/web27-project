@@ -69,7 +69,6 @@ const res = localStorage.getItem("key");
 const infos = JSON.parse(res);
 
 function renderItem() {
-  removeCart();
   const html = infos.map((info) => {
     return `
        <div
@@ -86,14 +85,14 @@ function renderItem() {
             </div>
             <div class="col-xl-3">
               <div class="d-flex count justify-content-center">
-                <button class="font-30 btn-down">
-                  <p style="margin-bottom: 0">-</p>
+                <button class="font-30">
+                  <p class="btn-down" style="margin-bottom: 0">-</p>
                 </button>
                 <div class=" number-count font-30 text-center">
                   <p class="number" style="margin-bottom: 0">1</p>
                 </div>
-                <button class="font-30 btn-up">
-                  <p style="margin-bottom: 0">+</p>
+                <button class="font-30">
+                  <p class="btn-up" style="margin-bottom: 0">+</p>
                 </button>
               </div>
             </div>
@@ -119,51 +118,12 @@ function renderItem() {
   list.innerHTML = htmls;
 }
 renderItem();
-function countUp() {
-  let a = 1;
-  const btnUp = document.querySelector(".btn-up");
-  const btnDown = document.querySelector(".btn-down");
-  const numberCount = document.querySelector(".number");
-
-  btnUp.addEventListener("click", () => {
-    console.log(a);
-    numberCount.innerHTML = ++a;
-  });
-
-  btnDown.addEventListener("click", () => {
-    if (a > 1) {
-      numberCount.innerHTML = --a;
-    } else {
-      return false;
-    }
-  });
-}
-
-function countUpCart() {
-  const counts = document.querySelectorAll(".count");
-  counts.forEach((count) => {
-    count.addEventListener("click", function (e) {
-      let a = 1;
-      const btnCount = e.target;
-      const product = btnCount.parentElement.parentElement;
-      const btnUp = product
-        .querySelector(".btn-up")
-        .addEventListener("click", countUp);
-      const numberCount = product.querySelector(".number");
-      const btnDown = product.querySelector(".btn-down");
-
-      function countUp() {
-        numberCount.innerHTML = ++a;
-      }
-    });
-  });
-}
-countUpCart();
 
 function removeCart() {
   const btnDels = document.querySelectorAll(".btn-delete");
   btnDels.forEach((btnDel, index) => {
     btnDel.addEventListener("click", (e) => {
+      confirm("Bạn có muốn xóa không ?");
       let dish = e.target;
       let infoDish =
         dish.parentElement.parentElement.parentElement.parentElement;
@@ -172,7 +132,7 @@ function removeCart() {
       let listDish = localStorage.getItem("key");
       let data = JSON.parse(listDish);
       console.log(index);
-      data.splice(infoDish);
+      data.splice(infoDish, 1);
       localStorage.setItem("key", JSON.stringify(data));
       console.log(data);
     });
@@ -182,11 +142,14 @@ removeCart();
 
 function totalMonney() {
   const subTotal = document.querySelector(".Subtotal");
-  const totol = infos.reduce((total, info) => {
+  const total = document.querySelector(".total-monney");
+  const subtotol = infos.reduce((total, info) => {
     let result = (total += Number(info.productPrice));
     return result;
   }, 0);
-  subTotal.innerHTML = `$${totol}`;
+  subTotal.innerHTML = `$${subtotol}`;
+  let result = subtotol + 9;
+  total.innerHTML = `$${result}`;
 }
 totalMonney();
 
@@ -217,9 +180,7 @@ function localTion() {
   window.onload = async () => {
     try {
       const provinces = await getProvinces();
-
       const options = provinces.map(createOption);
-
       provinceEl.append(...options);
     } catch (err) {
       console.log(err);
@@ -233,7 +194,6 @@ function localTion() {
       const districts = await getDistricts(proviceCode);
 
       const options = districts.districts.map(createOption);
-
       districtEl.append(...options);
     } catch (err) {
       console.log(err);
@@ -245,14 +205,33 @@ function localTion() {
 
     try {
       const wards = await getWards(districtCode);
-
       const options = wards.wards.map(createOption);
-
       wardEl.append(...options);
     } catch (err) {
       console.log(err);
     }
   };
 }
-
 localTion();
+
+// function count() {}
+// count();
+
+// let a = 1;
+// const counts = document.querySelectorAll(".row");
+// counts.forEach((count) => {
+//   count.addEventListener("click", (e) => {
+//     const item = e.target;
+//     const btn = item.parentElement;
+//     const number = btn.querySelector(".number");
+//     const plus = btn.querySelector(".btn-up");
+//     const minus = btn.querySelector(".btn-down");
+//     console.log(number);
+//     console.log(plus);
+//     console.log(minus);
+
+//     plus.addEventListener("click", function () {
+//       number.textContent = ++a;
+//     });
+//   });
+// });
