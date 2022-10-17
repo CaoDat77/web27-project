@@ -15,6 +15,9 @@ const navAbout = document.querySelector(".abouts-nav");
 const accountNav = document.querySelector(".account-nav");
 const listAcc = document.querySelector(".accounts");
 const showForms = document.querySelectorAll(".show-form");
+const btnCloseMoldaTable = document.querySelector(".molda span");
+
+btnCloseMoldaTable.addEventListener("click", closeMolda);
 
 showForms.forEach((showForm) => {
   showForm.addEventListener("click", () => {
@@ -34,7 +37,10 @@ btnForms.forEach((btn) => {
   btn.addEventListener("click", showMolda);
 });
 
-btnClose.addEventListener("click", closeMolda);
+btnClose.addEventListener("click", function () {
+  molda.style.display = "none";
+});
+
 btnClose.addEventListener("click", function () {
   document.querySelector(".molda-account").style.display = "none";
 });

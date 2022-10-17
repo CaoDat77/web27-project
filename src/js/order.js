@@ -15,6 +15,8 @@ const navAbout = document.querySelector(".abouts-nav");
 const accountNav = document.querySelector(".account-nav");
 const listAcc = document.querySelector(".accounts");
 
+
+
 function showMolda() {
   molda.style.display = "block";
 }
