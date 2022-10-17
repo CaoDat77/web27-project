@@ -199,7 +199,7 @@ function renderDish() {
   let html = perDish.map((value) => {
     return `
       <div class="col-xl-3 col-6" id=${value.id}>
-            <div class="pd-x-20">
+            <div class="pd-x-30">
               <div class="pointer overflow-hidden position-relative dish-item">
                  <div class ="click-decs">
                       
@@ -271,6 +271,10 @@ const page2 = document.querySelector(".btn2");
 
 page1.addEventListener("click", function () {
   currentPage = 1;
+  if (currentPage == 1) {
+    page1.classList.add("active");
+    page2.classList.remove("active");
+  }
   console.log(currentPage);
   perDish = menus.slice(
     (currentPage - 1) * perPage,
@@ -281,6 +285,10 @@ page1.addEventListener("click", function () {
 
 page2.addEventListener("click", function () {
   currentPage = 2;
+  if (currentPage == 2) {
+    page1.classList.remove("active");
+    page2.classList.add("active");
+  }
   console.log(currentPage);
   perDish = menus.slice(
     (currentPage - 1) * perPage,

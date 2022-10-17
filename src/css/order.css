@@ -493,6 +493,7 @@ select {
 }
 
 option {
+  font-family: "Jost", sans-serif;
   font-size: 1.6rem;
 }
 
@@ -700,8 +701,8 @@ option {
   }
 }
 
-.pd-x-20 {
-  padding: 2rem;
+.pd-x-30 {
+  padding: 3rem;
 }
 
 .number-page p {
@@ -718,4 +719,8 @@ option {
 .number-page p:hover {
   background-color: var(--primary-color);
   border: none;
+}
+
+.active {
+  background-color: var(--primary-color);
 }
