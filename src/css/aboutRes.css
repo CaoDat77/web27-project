@@ -462,6 +462,7 @@ select {
 
 option {
   font-size: 1.6rem;
+  font-family: "Jost", sans-serif;
 }
 
 .icons i {
