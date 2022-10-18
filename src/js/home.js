@@ -16,6 +16,20 @@ const accountNav = document.querySelector(".account-nav");
 const listAcc = document.querySelector(".accounts");
 const showForms = document.querySelectorAll(".show-form");
 const btnCloseMoldaTable = document.querySelector(".molda span");
+const signBtn = document.querySelector(".sign-btn");
+const signForm = document.querySelector(".form-sign");
+const registerForm = document.querySelector(".form-register");
+const registerBtn = document.querySelector(".register-btn");
+
+registerBtn.addEventListener("click", function () {
+  registerForm.style.display = "block";
+  signForm.style.display = "none";
+});
+
+signBtn.addEventListener("click", function () {
+  signForm.style.display = "block";
+  registerForm.style.display = "none";
+});
 
 btnCloseMoldaTable.addEventListener("click", closeMolda);
 
@@ -79,24 +93,41 @@ function scrollFunction() {
   }
 }
 
-const form = document.querySelector("form");
-
-form.addEventListener("submit", (e) => {
+const formSignUp = document.querySelector(".form-sign-up");
+formSignUp.addEventListener("submit", (e) => {
   e.preventDefault();
-  const userName = document.querySelector("#user");
-  const password = document.querySelector("#password");
-  const email = document.querySelector("#email");
-  const cfpassword = document.querySelector("#cfpassword");
+  const userName = document.querySelector("#user-sign-up").value;
+  const password = document.querySelector("#password-sign-up").value;
+  const email = document.querySelector("#email-sign-up").value;
+  const cfpassword = document.querySelector("#cfpassword-sign-up").value;
   const textInput = document.querySelectorAll(".text-input");
 
+  console.log(userName);
+
   const user = {
-    userName: userName.value,
-    password: password.value,
-    email: email.value,
-    cfpassword: cfpassword.value,
+    userName: userName,
+    password: password,
+    email: email,
+    cfpassword: cfpassword,
   };
 
   const json = JSON.stringify(user);
   localStorage.setItem(userName, json);
   alert("Đăng kí thành công");
+});
+
+const formSignIn = document.querySelector(".form-sign-in");
+formSignIn.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let userName = document.querySelector("#user-sign-in").value;
+  const password = document.querySelector("#password-sign-in").value;
+
+  const user = localStorage.getItem(userName);
+  const data = JSON.parse(user);
+
+  if (user === null) {
+    alert("vui lòng nhập username và password");
+  } else if (userName == data.userName && password == data.password) {
+    alert("Đăng nhập thành công");
+  }
 });

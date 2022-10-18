@@ -123,16 +123,16 @@ function removeCart() {
   const btnDels = document.querySelectorAll(".btn-delete");
   btnDels.forEach((btnDel, index) => {
     btnDel.addEventListener("click", (e) => {
-      confirm("Bạn có muốn xóa không ?");
       let dish = e.target;
       let infoDish =
         dish.parentElement.parentElement.parentElement.parentElement;
-      infoDish.remove();
       console.log(infoDish);
       let listDish = localStorage.getItem("key");
       let data = JSON.parse(listDish);
-      console.log(index);
-      data.splice(infoDish, 1);
+
+      if (confirm("Bạn có muốn xóa không ?")) {
+        data.splice(infoDish, 1);
+      }
       localStorage.setItem("key", JSON.stringify(data));
       console.log(data);
     });
@@ -214,24 +214,26 @@ function localTion() {
 }
 localTion();
 
-// function count() {}
-// count();
+// function count() {
+//   let a = 1;
+//   const counts = document.querySelectorAll(".row");
+//   counts.forEach((count) => {
+//     count.addEventListener("click", (e) => {
+//       const item = e.target;
+//       console.log(item);
+//       const btn = item.parentElement;
+//       const number = btn.querySelector(".number");
+//       const plus = btn.querySelector(".btn-up");
+//       const minus = btn.querySelector(".btn-down");
+//       // console.log(number);
+//       // console.log(plus);
+//       // console.log(minus);
 
-// let a = 1;
-// const counts = document.querySelectorAll(".row");
-// counts.forEach((count) => {
-//   count.addEventListener("click", (e) => {
-//     const item = e.target;
-//     const btn = item.parentElement;
-//     const number = btn.querySelector(".number");
-//     const plus = btn.querySelector(".btn-up");
-//     const minus = btn.querySelector(".btn-down");
-//     console.log(number);
-//     console.log(plus);
-//     console.log(minus);
-
-//     plus.addEventListener("click", function () {
-//       number.textContent = ++a;
+//       // plus.addEventListener("click", function () {
+//       //   number.textContent = ++a;
+//       //   console.log(a);
+//       // });
 //     });
 //   });
-// });
+// }
+// count();
