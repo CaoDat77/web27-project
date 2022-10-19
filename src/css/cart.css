@@ -588,7 +588,7 @@ a {
   font-size: 1.6rem !important;
 }
 
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
   .form-user {
     width: 80%;
   }
@@ -601,9 +601,25 @@ a {
   .none-md {
     display: none;
   }
-}
 
-@media screen and (max-width: 576px) {
+  li {
+    display: none;
+  }
+
+  .pd-none {
+    padding: 0;
+  }
+
+  .none {
+    display: none;
+  }
+
+  li:last-child {
+    display: block;
+  }
+} */
+
+@media screen and (max-width: 1024px) {
   li {
     display: none;
   }
