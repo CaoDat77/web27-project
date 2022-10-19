@@ -14,6 +14,30 @@ const aboutBtn = document.querySelector(".introduce-nav");
 const navAbout = document.querySelector(".abouts-nav");
 const accountNav = document.querySelector(".account-nav");
 const listAcc = document.querySelector(".accounts");
+const signBtn = document.querySelector(".sign-btn");
+const signForm = document.querySelector(".form-sign");
+const registerForm = document.querySelector(".form-register");
+const registerBtn = document.querySelector(".register-btn");
+const moldaSignIn = document.querySelector(".molda-account");
+const signBtnOpens = document.querySelectorAll(".sign-open");
+
+signBtnOpens.forEach((signBtnOpen) => {
+  signBtnOpen.addEventListener("click", function () {
+    moldaSignIn.style.display = "block";
+  });
+});
+
+registerBtn.addEventListener("click", function () {
+  registerForm.style.display = "block";
+  signForm.style.display = "none";
+});
+
+signBtn.addEventListener("click", function () {
+  signForm.style.display = "block";
+  registerForm.style.display = "none";
+});
+
+btnCloseMoldaTable.addEventListener("click", closeMolda);
 
 function showMolda() {
   molda.style.display = "block";
@@ -63,4 +87,3 @@ function scrollFunction() {
     document.querySelector("nav").style.marginTop = "5rem";
   }
 }
-
