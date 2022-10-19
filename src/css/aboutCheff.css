@@ -50,6 +50,53 @@ header {
   height: 100vh;
 }
 
+.molda-account {
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.form-sign {
+  display: none;
+}
+
+.form-user {
+  width: 30%;
+  transform: translateY(20%);
+  background-color: black;
+  padding: 2rem 3rem;
+  box-shadow: 0 0 5px #999;
+  border-radius: 10px;
+  animation: showForm 0.5s;
+}
+
+.form-user div label {
+  font-size: 2rem;
+}
+
+.form-user div input {
+  font-size: 2rem;
+  padding: 0.5rem 0;
+  color: white;
+}
+
+.logo-form {
+  width: 10rem;
+}
+
+.logo-form:hover {
+  transform: scale(1);
+}
+
 .pd-btn {
   padding: 1rem 2rem;
 }

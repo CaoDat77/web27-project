@@ -20,6 +20,7 @@ const registerForm = document.querySelector(".form-register");
 const registerBtn = document.querySelector(".register-btn");
 const moldaSignIn = document.querySelector(".molda-account");
 const signBtnOpens = document.querySelectorAll(".sign-open");
+const btnCloseMoldaTable = document.querySelector(".molda span");
 
 signBtnOpens.forEach((signBtnOpen) => {
   signBtnOpen.addEventListener("click", function () {
@@ -51,8 +52,13 @@ btnForms.forEach((btn) => {
   btn.addEventListener("click", showMolda);
 });
 
-btnClose.addEventListener("click", closeMolda);
+btnClose.addEventListener("click", function () {
+  molda.style.display = "none";
+});
 
+btnClose.addEventListener("click", function () {
+  document.querySelector(".molda-account").style.display = "none";
+});
 btnMoldaMoblie.addEventListener("click", function () {
   moldaMobile.style.display = "block";
 });

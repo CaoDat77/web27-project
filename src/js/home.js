@@ -14,13 +14,13 @@ const aboutBtn = document.querySelector(".introduce-nav");
 const navAbout = document.querySelector(".abouts-nav");
 const accountNav = document.querySelector(".account-nav");
 const listAcc = document.querySelector(".accounts");
-const btnCloseMoldaTable = document.querySelector(".molda span");
 const signBtn = document.querySelector(".sign-btn");
 const signForm = document.querySelector(".form-sign");
 const registerForm = document.querySelector(".form-register");
 const registerBtn = document.querySelector(".register-btn");
 const moldaSignIn = document.querySelector(".molda-account");
 const signBtnOpens = document.querySelectorAll(".sign-open");
+const btnCloseMoldaTable = document.querySelector(".molda span");
 
 signBtnOpens.forEach((signBtnOpen) => {
   signBtnOpen.addEventListener("click", function () {

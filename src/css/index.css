@@ -49,6 +49,17 @@ header {
   height: 100vh;
 }
 
+.molda-account {
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
 .pointer {
   cursor: pointer;
 }
@@ -278,17 +289,6 @@ nav {
 }
 
 .molda {
-  position: fixed;
-  z-index: 4;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.8);
-  display: none;
-}
-
-.molda-account {
   position: fixed;
   z-index: 4;
   top: 0;
@@ -596,6 +596,21 @@ a {
 
   li:last-child {
     display: block;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .form-user {
+    width: 80%;
+  }
+
+  .form-table {
+    width: 100%;
+    height: 45rem;
+  }
+
+  .none-md {
+    display: none;
   }
 }
 
