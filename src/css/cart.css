@@ -477,6 +477,7 @@ li a:hover {
 }
 
 input {
+  font-family: "Jost", sans-serif;
   width: 100%;
   border: none;
   border-bottom: 1px solid #999;

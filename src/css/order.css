@@ -513,6 +513,7 @@ li:hover a {
 }
 
 input {
+  font-family: "Jost", sans-serif;
   width: 100%;
   border: none;
   border-bottom: 1px solid #999;
