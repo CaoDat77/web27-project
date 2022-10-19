@@ -587,6 +587,21 @@ a {
   font-size: 1.6rem !important;
 }
 
+@media screen and (max-width: 1024px) {
+  .form-user {
+    width: 80%;
+  }
+
+  .form-table {
+    width: 80%;
+    height: 45rem;
+  }
+
+  .none-md {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 576px) {
   li {
     display: none;

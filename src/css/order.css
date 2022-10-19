@@ -736,6 +736,21 @@ option {
   height: 100%;
 }
 
+@media screen and (max-width: 1024px) {
+  .form-user {
+    width: 80%;
+  }
+
+  .form-table {
+    width: 80%;
+    height: 45rem;
+  }
+
+  .none-md {
+    display: none;
+  }
+}
+
 @keyframes showBtnAdd {
   from {
     bottom: -5.5rem;

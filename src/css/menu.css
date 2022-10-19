@@ -585,6 +585,21 @@ a {
   border-bottom: 1px solid #333;
 }
 
+@media screen and (max-width: 1024px) {
+  .form-user {
+    width: 80%;
+  }
+
+  .form-table {
+    width: 80%;
+    height: 45rem;
+  }
+
+  .none-md {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 576px) {
   li {
     display: none;
