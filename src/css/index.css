@@ -483,6 +483,7 @@ input {
 }
 
 select {
+  font-family: "Jost", sans-serif;
   margin-bottom: 1rem;
   width: 100%;
   border: none;
