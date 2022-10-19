@@ -148,7 +148,7 @@ function renderItem() {
               <img src=${info.productImg} alt="" />
             </div>
             <div
-              class="col-xl-3 font-20 d-flex justify-content-center pd-tb-10"
+              class="col-xl-3 font-20 d-flex justify-content-center font-nor pd-tb-10"
             >
               ${info.productName}
             </div>
@@ -169,7 +169,7 @@ function renderItem() {
               <div
                 class="d-flex justify-content-between align-items-center flex-colunm"
               >
-                <div class=" d-flex font-20 pd-tb-10">
+                <div class=" d-flex font-20 font-nor pd-tb-10">
                   <p style="margin-bottom: 0">Price:</p>
                   <p class="total" style="margin-bottom: 0"> $${info.productPrice}</p>
                 </div>
