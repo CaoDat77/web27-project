@@ -93,3 +93,43 @@ function scrollFunction() {
     document.querySelector("nav").style.marginTop = "5rem";
   }
 }
+
+const formSignUp = document.querySelector(".form-sign-up");
+formSignUp.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const userName = document.querySelector("#user-sign-up").value;
+  const password = document.querySelector("#password-sign-up").value;
+  const email = document.querySelector("#email-sign-up").value;
+  const cfpassword = document.querySelector("#cfpassword-sign-up").value;
+  const textInput = document.querySelectorAll(".text-input");
+
+  console.log(userName);
+
+  const user = {
+    userName: userName,
+    password: password,
+    email: email,
+    cfpassword: cfpassword,
+  };
+
+  const json = JSON.stringify(user);
+  localStorage.setItem(userName, json);
+  alert("Đăng kí thành công");
+});
+
+const formSignIn = document.querySelector(".form-sign-in");
+formSignIn.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let userName = document.querySelector("#user-sign-in").value;
+  const password = document.querySelector("#password-sign-in").value;
+
+  const user = localStorage.getItem(userName);
+  const data = JSON.parse(user);
+
+  if (user === null) {
+    alert("vui lòng nhập username và password");
+  } else if (userName == data.userName && password == data.password) {
+    alert("Đăng nhập thành công");
+  }
+});
+s;
