@@ -709,7 +709,7 @@ a {
   left: 50%;
   border: 3px solid var(--primary-color);
   padding: 1rem 2rem;
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: var(--primary-color);
   font-weight: 700;
   transform: translateX(-50%);

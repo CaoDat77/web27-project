@@ -272,8 +272,10 @@ function renderDish() {
               <div class="pointer overflow-hidden position-relative dish-item">
                  <div class ="click-decs"> 
                    <img src=${value.img} alt="" />
-                 </div>                                                                    
+                   <a class="cart" href="cart.html"><i class="bx bx-cart"></i></a>
+                 </div>                                                    
                 <button class="add-cart-btn font-nor">ADD TO CARD</button>
+                
               </div>
               <div class="font-16 font-nor mg-t-10">
                 <div class="name-dish">${value.title}</div>
