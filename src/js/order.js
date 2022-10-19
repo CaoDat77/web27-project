@@ -270,12 +270,10 @@ function renderDish() {
       <div class="col-xl-3 col-6" id=${value.id}>
             <div class="pd-x-30">
               <div class="pointer overflow-hidden position-relative dish-item">
-                 <div class ="click-decs">
-                      
-                          <img src=${value.img} alt="" />
-                      
+                 <div class ="click-decs"> 
+                   <img src=${value.img} alt="" />
                  </div>                                                                    
-                <button class="add-cart-btn">ADD TO CARD</button>
+                <button class="add-cart-btn font-nor">ADD TO CARD</button>
               </div>
               <div class="font-16 font-nor mg-t-10">
                 <div class="name-dish">${value.title}</div>
@@ -287,10 +285,10 @@ function renderDish() {
               <div
                 class="cart-mobile d-flex justify-content-between align-items-center"
               >
-                <button class="add-cart-mobile-btn font-14 pimary-color">
+                <button class="add-cart-mobile-btn font-14 pimary-color font-nor">
                   ADD TO CART
                 </button>
-                <i class="bx bx-cart"></i>
+                <a href="cart.html"><i class="bx bx-cart"></i></a>
               </div>
             </div>
           </div>
