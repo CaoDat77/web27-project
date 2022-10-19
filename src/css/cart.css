@@ -674,6 +674,7 @@ a {
 }
 
 .number-count p {
+  font-family: "Jost", sans-serif;
   width: 4rem;
   height: 4rem;
   line-height: 4rem;
