@@ -139,11 +139,6 @@ const list = document.querySelector(".list-dish");
 const res = localStorage.getItem("key");
 const infos = JSON.parse(res);
 
-let a = 1;
-function countUp() {
-  console.log(a);
-}
-
 function renderItem() {
   const html = infos.map((info) => {
     return `
@@ -161,8 +156,8 @@ function renderItem() {
             </div>
             <div class="col-xl-3">
               <div class="d-flex count justify-content-center">
-              <div>
-                  <input type="number" value="1" />
+              <div class="amount">
+                  <input type="number"value="1" />
               </div>
               </div>
             </div>
@@ -172,7 +167,7 @@ function renderItem() {
               >
                 <div class=" d-flex font-20 font-nor pd-tb-10">
                   <p style="margin-bottom: 0">Price:</p>
-                  <p class="total" style="margin-bottom: 0"> $${info.productPrice}</p>
+                  <p class="total" style="margin-bottom: 0"> ${info.productPrice}</p>
                 </div>
                 <div class="btn-delete">
                   <i class="bx bx-x-circle font-50"></i>
@@ -185,8 +180,6 @@ function renderItem() {
   });
   const htmls = html.join("");
   list.innerHTML = htmls;
-  const down = list.find(".btn-down");
-  console.log(down);
 }
 renderItem();
 
@@ -210,6 +203,25 @@ function removeCart() {
 removeCart();
 
 function totalMonney() {
+  // const amounts = document.querySelectorAll(".amount input");
+  // amounts.forEach((amount) => {
+  //   amount.addEventListener("click", (e) => {
+  //     console.log(amount.value);
+  //     let item = e.target;
+  //     let price = item.parentElement.parentElement.parentElement.parentElement;
+  //     let priceValue = price.querySelector(".total");
+  //     let listDish = localStorage.getItem("key");
+  //     let data = JSON.parse(listDish);
+  //     data.splice(price, 1);
+  //     localStorage.setItem("key", JSON.stringify(data));
+
+  //     if (amount.value < 1) {
+  //       price.remove();
+  //       data.splice(price, 1);
+  //     }
+  //   });
+  // });
+
   const subTotal = document.querySelector(".Subtotal");
   const total = document.querySelector(".total-monney");
   const subtotol = infos.reduce((total, info) => {

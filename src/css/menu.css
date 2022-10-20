@@ -482,6 +482,7 @@ li a:hover {
 }
 
 input {
+  background-color: transparent;
   font-family: "Jost", sans-serif;
   width: 100%;
   border: none;
@@ -514,14 +515,6 @@ option {
 
 .nav-mobile:hover {
   background-color: #e3c731;
-
-  font-size: 2.4rem;
-  transition: 0.3s;
-}
-
-.btn-about:hover {
-  background-color: #e3c731;
-
   font-size: 2.4rem;
   transition: 0.3s;
 }
@@ -598,6 +591,19 @@ a {
 }
 
 @media screen and (max-width: 1024px) {
+  .form-user {
+    width: 100%;
+  }
+
+  .form-table {
+    width: 100%;
+    height: 45rem;
+  }
+
+  .none-md {
+    display: none;
+  }
+
   li {
     display: none;
   }
@@ -612,11 +618,6 @@ a {
 
   li:last-child {
     display: block;
-  }
-
-  .form-table {
-    width: 100%;
-    height: 45rem;
   }
 
   li:hover {

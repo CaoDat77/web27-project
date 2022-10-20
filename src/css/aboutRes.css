@@ -153,6 +153,10 @@ header {
   padding: 0 2rem;
 }
 
+.pd-lr-30 {
+  padding: 0 3rem;
+}
+
 .pd-l-20 {
   padding-left: 2rem;
 }
@@ -213,6 +217,10 @@ header {
   margin-top: 1rem;
 }
 
+.mg-t-30 {
+  margin-top: 3rem;
+}
+
 .font-16 {
   font-size: 1.6rem;
 }
@@ -270,11 +278,12 @@ nav {
   font-size: 1.4rem;
 }
 
+.logo-mobile img {
+  width: 7rem;
+}
+
 .close-btn-mobile {
-  position: absolute;
-  top: 5rem;
-  right: 3rem;
-  font-size: 4.8rem;
+  font-size: 4rem;
 }
 
 .list-nav-mobile {
@@ -285,16 +294,18 @@ nav {
   margin-left: auto;
   animation: showNav 1s;
 }
-.nav-mobile {
-  padding: 1.2rem 0;
-  cursor: pointer;
-}
-.closeNav {
-  animation: closeNav 1s forwards;
+
+.pd-l-40 {
+  padding-left: 4rem;
 }
 
-.item-nav div {
-  padding: 1rem 1rem 1rem 2rem;
+.nav-mobile {
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+
+.closeNav {
+  animation: closeNav 1s forwards;
 }
 
 .molda {
@@ -493,6 +504,7 @@ li a:hover {
 }
 
 input {
+  background-color: transparent;
   font-family: "Jost", sans-serif;
   width: 100%;
   border: none;
@@ -515,7 +527,7 @@ option {
 }
 
 .icons i {
-  padding-right: 1rem;
+  padding-right: 0.8rem;
 }
 
 .contact-home {
@@ -526,15 +538,7 @@ option {
 
 .nav-mobile:hover {
   background-color: #e3c731;
-  font-weight: bold;
-  font-size: 3rem;
-  transition: 0.3s;
-}
-
-.btn-about:hover {
-  background-color: #e3c731;
-  font-weight: bold;
-  font-size: 3rem;
+  font-size: 2.4rem;
   transition: 0.3s;
 }
 
@@ -614,6 +618,19 @@ a {
 }
 
 @media screen and (max-width: 1024px) {
+  .form-user {
+    width: 100%;
+  }
+
+  .form-table {
+    width: 100%;
+    height: 45rem;
+  }
+
+  .none-md {
+    display: none;
+  }
+
   li {
     display: none;
   }
@@ -630,14 +647,22 @@ a {
     display: block;
   }
 
+  li:hover {
+    padding: unset;
+    border: unset;
+  }
+
+  .form-user {
+    width: 100%;
+  }
+
   .form-table {
     width: 100%;
     height: 45rem;
   }
 
-  li:hover {
-    padding: unset;
-    border: unset;
+  .none-md {
+    display: none;
   }
 }
 

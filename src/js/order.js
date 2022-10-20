@@ -137,7 +137,7 @@ const menus = [
   {
     id: 1,
     img: "/image_order/dish-1-1.svg",
-    title: "Purple Corn Tostada",
+    title: "Purple Tostada",
     price: 36,
   },
 
@@ -151,21 +151,21 @@ const menus = [
   {
     id: 3,
     img: "/image_order/dish-1-3.svg",
-    title: "Fresh Oysters Dozen",
+    title: "Fresh Oysters ",
     price: 59,
   },
 
   {
     id: 4,
     img: "/image_order/dish-1-4.svg",
-    title: "Wild Mushroom Arancini",
+    title: "Wild Mushroom ",
     price: 18,
   },
 
   {
     id: 5,
     img: "/image_order/dish-2-1.svg",
-    title: "Ebony Rib Fillet Steak",
+    title: "Ebony Fillet Steak",
     price: 58,
   },
 
@@ -179,14 +179,14 @@ const menus = [
   {
     id: 7,
     img: "/image_order/dish-2-3.svg",
-    title: "Crispy Skin Chicken",
+    title: "Crispy Chicken",
     price: 29,
   },
 
   {
     id: 8,
     img: "/image_order/dish-2-4.svg",
-    title: "Pan Fried Barramundi",
+    title: "Pan  Barramundi",
     price: 38,
   },
 
@@ -288,7 +288,7 @@ function renderDish() {
                 class="cart-mobile d-flex justify-content-between align-items-center"
               >
                 <button class="add-cart-mobile-btn font-14 pimary-color font-nor">
-                  ADD TO CART
+                  ADD 
                 </button>
                 <a href="cart.html"><i class="bx bx-cart"></i></a>
               </div>

@@ -175,7 +175,7 @@ function renderDish() {
                     vero accusam et justo duo dolores et ea rebum
                   </p>
                   <div class="mg-t-20">
-                    <div class="count d-flex">
+                    <div class="count d-flex align-items-center">
                       <div class="minus font-50 font-w d-flex align-items-center justify-content-center">
                         <button>-</button>
                       </div>
