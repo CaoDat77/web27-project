@@ -162,7 +162,7 @@ header {
 }
 
 .pd-tb-30 {
-  padding: 3r 0;
+  padding: 3rem 0;
 }
 
 .pd-b-80 {
@@ -267,10 +267,7 @@ nav {
 }
 
 .close-btn-mobile {
-  position: absolute;
-  top: 5rem;
-  right: 3rem;
-  font-size: 4.8rem;
+  font-size: 4rem;
 }
 
 .list-nav-mobile {
@@ -387,6 +384,8 @@ ul {
 .logo img {
   width: 10rem;
 }
+
+
 
 .logo a img:hover {
   transform: scale(1);
@@ -571,7 +570,19 @@ a {
   border-bottom: 1px solid #333;
 }
 
+.chef-avatar img {
+  width: 70%;
+}
 
+@media screen and (max-width: 500px) {
+  .font-30 {
+    font-size: 2rem;
+  }
+
+  .font-50 {
+    font-size: 3rem;
+  }
+}
 
 @media screen and (max-width: 1024px) {
   li {
@@ -600,6 +611,10 @@ a {
     border: unset;
   }
   .sm-w-100 {
+    width: 100%;
+  }
+
+  .chef-avatar img {
     width: 100%;
   }
 }
@@ -631,10 +646,6 @@ a {
   }
 }
 
-.chef-avatar img {
-  width: 70%;
-}
-
 .chef-avatar img:hover {
   transform: scale(1);
 }
@@ -646,7 +657,7 @@ a {
 }
 
 .lineImg img {
-  width: 87%;
+  width: 84%;
 }
 
 .bg-comment {
@@ -662,7 +673,7 @@ a {
 }
 
 .prose {
-  width: 40rem;
+  width: 35rem;
   position: absolute;
   bottom: 15%;
   right: 50%;

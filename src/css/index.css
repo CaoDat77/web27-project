@@ -152,6 +152,10 @@ header {
   padding-left: 2rem;
 }
 
+.pd-l-40 {
+  padding-left: 4rem;
+}
+
 .pd-b-30 {
   padding-bottom: 3rem;
 }
@@ -261,31 +265,28 @@ nav {
   font-size: 1.4rem;
 }
 
+.logo-mobile img {
+  width: 7rem;
+}
+
 .close-btn-mobile {
-  position: absolute;
-  top: 5rem;
-  right: 3rem;
-  font-size: 4.8rem;
+  font-size: 4rem;
 }
 
 .list-nav-mobile {
   width: 60%;
-  height: 100%;
+  height: 100vh;
   background-color: black;
   color: white;
   margin-left: auto;
   animation: showNav 1s;
 }
 .nav-mobile {
-  padding: 1.2rem 0;
+  padding: 1rem 2rem;
   cursor: pointer;
 }
 .closeNav {
   animation: closeNav 1s forwards;
-}
-
-.item-nav div {
-  padding: 1rem 1rem 1rem 2rem;
 }
 
 .molda {
@@ -498,7 +499,7 @@ option {
 }
 
 .icons i {
-  padding-right: 1rem;
+  padding-right: 0.8rem;
 }
 
 .contact-home {
@@ -509,15 +510,15 @@ option {
 
 .nav-mobile:hover {
   background-color: #e3c731;
-  font-weight: bold;
-  font-size: 3rem;
+
+  font-size: 2.4rem;
   transition: 0.3s;
 }
 
 .btn-about:hover {
   background-color: #e3c731;
-  font-weight: bold;
-  font-size: 3rem;
+
+  font-size: 2.4rem;
   transition: 0.3s;
 }
 
@@ -586,6 +587,16 @@ a {
   transform: scale(1);
 }
 
+@media screen and (max-width: 500px) {
+  .font-30 {
+    font-size: 2rem;
+  }
+
+  .font-50 {
+    font-size: 3rem;
+  }
+}
+
 @media screen and (max-width: 786px) {
   li:last-child {
     display: block;
@@ -615,7 +626,7 @@ a {
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 1024px) {
   li {
     display: none;
   }
@@ -644,6 +655,10 @@ a {
   li:hover {
     padding: unset;
     border: unset;
+  }
+
+  .none-pd-80 {
+    padding: 0;
   }
 }
 

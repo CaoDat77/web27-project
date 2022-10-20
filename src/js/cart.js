@@ -1,6 +1,8 @@
 import "../css/cart.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "boxicons/css/boxicons.min.css";
+import $ from "jquery";
+import _ from "lodash";
 
 const btnForms = document.querySelectorAll(".btn-form");
 const molda = document.querySelector(".molda");
@@ -137,6 +139,11 @@ const list = document.querySelector(".list-dish");
 const res = localStorage.getItem("key");
 const infos = JSON.parse(res);
 
+let a = 1;
+function countUp() {
+  console.log(a);
+}
+
 function renderItem() {
   const html = infos.map((info) => {
     return `
@@ -154,15 +161,9 @@ function renderItem() {
             </div>
             <div class="col-xl-3">
               <div class="d-flex count justify-content-center">
-                <button class="font-30">
-                  <p class="btn-down" style="margin-bottom: 0">-</p>
-                </button>
-                <div class=" number-count font-30 text-center">
-                  <p class="number" style="margin-bottom: 0">1</p>
-                </div>
-                <button class="font-30">
-                  <p class="btn-up" style="margin-bottom: 0">+</p>
-                </button>
+              <div>
+                  <input type="number" value="1" />
+              </div>
               </div>
             </div>
             <div class="col-xl-3">
@@ -182,9 +183,10 @@ function renderItem() {
           </div>
       `;
   });
-
   const htmls = html.join("");
   list.innerHTML = htmls;
+  const down = list.find(".btn-down");
+  console.log(down);
 }
 renderItem();
 
@@ -196,12 +198,10 @@ function removeCart() {
       let infoDish =
         dish.parentElement.parentElement.parentElement.parentElement;
       console.log(infoDish);
+      infoDish.remove();
       let listDish = localStorage.getItem("key");
       let data = JSON.parse(listDish);
-
-      if (confirm("Bạn có muốn xóa không ?")) {
-        data.splice(infoDish, 1);
-      }
+      data.splice(infoDish, 1);
       localStorage.setItem("key", JSON.stringify(data));
       console.log(data);
     });
@@ -282,27 +282,3 @@ function localTion() {
   };
 }
 localTion();
-
-// function count() {
-//   let a = 1;
-//   const counts = document.querySelectorAll(".row");
-//   counts.forEach((count) => {
-//     count.addEventListener("click", (e) => {
-//       const item = e.target;
-//       console.log(item);
-//       const btn = item.parentElement;
-//       const number = btn.querySelector(".number");
-//       const plus = btn.querySelector(".btn-up");
-//       const minus = btn.querySelector(".btn-down");
-//       // console.log(number);
-//       // console.log(plus);
-//       // console.log(minus);
-
-//       // plus.addEventListener("click", function () {
-//       //   number.textContent = ++a;
-//       //   console.log(a);
-//       // });
-//     });
-//   });
-// }
-// count();
