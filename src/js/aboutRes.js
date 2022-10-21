@@ -115,6 +115,8 @@ formSignUp.addEventListener("submit", (e) => {
   const json = JSON.stringify(user);
   localStorage.setItem(userName, json);
   alert("Đăng kí thành công");
+  registerForm.style.display = "none";
+  signForm.style.display = "block";
 });
 
 const formSignIn = document.querySelector(".form-sign-in");
@@ -130,6 +132,7 @@ formSignIn.addEventListener("submit", (e) => {
     alert("vui lòng nhập username và password");
   } else if (userName == data.userName && password == data.password) {
     alert("Đăng nhập thành công");
+    moldaSignIn.style.display = "none";
   }
 });
 s;
