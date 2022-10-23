@@ -182,7 +182,7 @@ function renderDish() {
                       <div class="minus font-50 font-w d-flex align-items-center justify-content-center">
                         <button>-</button>
                       </div>
-                      <div class="color-black font-30 count-number d-flex justify-content-center align-items-center">
+                      <div class="color-black font-3 font-nor count-number d-flex justify-content-center align-items-center">
                         1
                       </div>
                       <div class="plus font-30 font-w d-flex align-items-center justify-content-center">
