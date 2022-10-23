@@ -378,6 +378,28 @@ page2.addEventListener("click", function () {
 
 const listDish = [];
 function addCart() {
+  const btnAddCart = document.querySelectorAll(".add-cart-btn");
+  btnAddCart.forEach(function (button, index) {
+    button.addEventListener("click", function (e) {
+      const btnItem = e.target;
+      const product = btnItem.parentElement.parentElement;
+      const productImg = product.querySelector("img").src;
+      const productName = product.querySelector(".name-dish").innerText;
+      const productPrice = product.querySelector(".price").innerText;
+      const item = {
+        productImg,
+        productName,
+        productPrice,
+        quantily: 1,
+      };
+      listDish.push(item);
+      console.log(listDish);
+      const toJson = JSON.stringify(listDish);
+      localStorage.setItem("key", toJson);
+      alert("Đã thêm vào giỏ hàng");
+    });
+  });
+
   const btnAddCartMobile = document.querySelectorAll(".add-cart-mobile-btn");
   btnAddCartMobile.forEach(function (button, index) {
     button.addEventListener("click", function (e) {
