@@ -438,6 +438,8 @@ li:hover {
   border-radius: 5px;
 }
 
+
+
 li a:hover {
   color: white !important;
 }
@@ -606,6 +608,10 @@ ul {
 
 .ytb {
   color: #f00;
+}
+
+.cart{
+
 }
 
 @media screen and (max-width: 500px) {
