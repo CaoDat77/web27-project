@@ -296,8 +296,9 @@ nav {
 }
 
 .list-nav-mobile {
-  width: 60%;
-  height: 100%;
+  float: left;
+  width: 65%;
+  height: 100vh;
   background-color: black;
   color: white;
   margin-left: auto;
@@ -538,7 +539,9 @@ option {
 }
 
 .icons i {
-  padding-right: 1rem;
+  font-size: 2.4rem;
+  padding-right: 0.8rem;
+  cursor: pointer;
 }
 
 .contact-home {
@@ -605,6 +608,26 @@ option {
   display: none;
 }
 
+.fb {
+  color: #1092f3;
+}
+
+.ig {
+  color: #ce2b67;
+}
+
+.tw {
+  color: #1b9ff1;
+}
+
+.pn {
+  color: #c81f24;
+}
+
+.ytb {
+  color: #f00;
+}
+
 @media screen and (max-width: 500px) {
   .font-30 {
     font-size: 2rem;
@@ -616,6 +639,16 @@ option {
 }
 
 @media screen and (max-width: 1024px) {
+  .icons i {
+    font-size: 3rem;
+    cursor: pointer;
+  }
+
+  .open-nav {
+    display: block;
+    font-size: 4rem;
+  }
+
   .form-user {
     width: 100%;
   }
@@ -643,6 +676,7 @@ option {
 
   li:last-child {
     display: block;
+    font-size: 3.5rem;
   }
 
   .form-table {
@@ -671,7 +705,7 @@ option {
 
 @keyframes showNav {
   from {
-    transform: translateX(200%);
+    transform: translateX(-200%);
   }
   to {
     transform: translateX(0);
