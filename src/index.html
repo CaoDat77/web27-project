@@ -363,11 +363,7 @@
                       />
                     </div>
                     <div class="mg-b-20">
-                      <select
-                        name="persion"
-                        id="persion"
-                        style="font-size: 1.6rem"
-                      >
+                      <select name="time" id="time" style="font-size: 1.6rem">
                         <option value="">9h:00</option>
                         <option value="">9h:30</option>
                         <option value="">10h:00</option>
@@ -838,7 +834,9 @@
   </body>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init();
+    AOS.init({
+      once: true,
+    });
   </script>
   <script src="/js/home.js" type="module"></script>
 </html>

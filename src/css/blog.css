@@ -428,9 +428,6 @@ button {
 .header-body-content {
   margin-top: 2rem;
 }
-li:last-child {
-  display: none;
-}
 
 .set-btn {
   border: 1px solid var(--primary-color);
@@ -602,6 +599,10 @@ option {
 
 .border-bot {
   border-bottom: 1px solid #333;
+}
+
+.open-nav {
+  display: none;
 }
 
 @media screen and (max-width: 500px) {

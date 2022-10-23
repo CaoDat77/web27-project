@@ -405,9 +405,6 @@ ul {
 .header-body-content {
   margin-top: 2rem;
 }
-li:last-child {
-  display: none;
-}
 
 .set-btn {
   border: 1px solid var(--primary-color);
@@ -598,6 +595,10 @@ a {
 
 .thumbnail {
   width: 50%;
+}
+
+.open-nav {
+  display: none;
 }
 
 @media screen and (max-width: 500px) {

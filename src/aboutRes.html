@@ -120,7 +120,11 @@
         <div class="container" style="height: 100%">
           <div class="d-flex justify-content-center" style="width: 100%">
             <nav>
-              <div class="container d-flex justify-content-between">
+              <div
+                class="container d-flex justify-content-between align-items-center"
+                style="--bs-gutter-x: 2.5rem"
+              >
+                <div class="font-50 open-nav"><i class="bx bx-menu"></i></div>
                 <div class="logo">
                   <a href="index.html">
                     <img
@@ -131,7 +135,7 @@
                 </div>
                 <ul
                   class="color-white d-flex font-20 font-content align-items-center"
-                  style="margin-bottom: 0"
+                  style="margin-bottom: 0; padding: 0"
                 >
                   <li><a class="color-white" href="menu.html">Menu</a></li>
                   <li class="position-relative introduce">
@@ -155,20 +159,10 @@
                     <a class="color-white" href="contact.html">Contact</a>
                   </li>
                   <li><a class="color-white" href="blog.html">Blog</a></li>
-                  <li class="position-relative introduce">
-                    <i class="bx bx-user"></i>
-                    <div class="abouts font-nor">
-                      <div
-                        class="ab-us sign-open pd-b-10 pd-t-10 pd-l-20 border-bot"
-                      >
-                        <a class="color-white">Sign In</a>
-                      </div>
-                      <div class="ab-cheff pd-b-10 pd-l-20 pd-t-10">
-                        <a class="color-white" href="cart.html">My Cart</a>
-                      </div>
-                    </div>
-
-                    <div class="arrow"></div>
+                  <li>
+                    <a href="cart.html" class="color-white">
+                      <i class="bx bx-cart font-24"></i
+                    ></a>
                   </li>
                   <li class="none-pd">
                     <button class="set-btn btn-form">FIND A TABLE</button>
@@ -176,7 +170,9 @@
                   <li class="none-pd">
                     <a class="set-btn" href="order.html"> ORDER ONLINE</a>
                   </li>
-                  <li class="font-btn open-nav"><i class="bx bx-menu"></i></li>
+                  <li class="sign-open">
+                    <i class="bx bx-user"></i>
+                  </li>
                 </ul>
               </div>
             </nav>
@@ -600,7 +596,7 @@
           class="container-fluid mg-t-80 overflow-hidden"
           style="--bs-gutter-x: 0"
         >
-          <div class="big-post" data-aos="zoom-in-up" data-aos-duration="3000">
+          <div class="big-post" data-aos="zoom-in-up" data-aos-duration="1500">
             <img src="/image_aboutRes/img4.svg" alt="" />
           </div>
         </div>
@@ -810,7 +806,9 @@
   <script src="js/aboutRes.js" type="module"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init();
+    AOS.init({
+      once: true,
+    });
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
