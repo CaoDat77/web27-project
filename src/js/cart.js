@@ -145,39 +145,52 @@ const infos = JSON.parse(res);
 function renderItem() {
   const html = infos.map((info) => {
     return `
-       <div
+          <div
             class="row justify-content-between align-items-center pd-b-30"
             style="--bs-gutter-x: 0rem"
           >
-            <div class="col-xl-3 col-12 d-flex">
+            <div class="col-xl-3 d-flex">
               <img class="thumbnail" src=${info.productImg} alt="" />
             </div>
-                <div
-              class="col-xl-3 font-20 d-flex justify-content-center font-nor pd-tb-10"
-                >
+            <div
+              class="col-xl-3 font-20 d-flex justify-content-center font-nor"
+            >
               ${info.productName}
+            </div>
+            <div class="col-xl-3 col-3">
+              <div class="d-flex count justify-content-center">
+                <div
+                  class="minus font-50 font-w d-flex align-items-center justify-content-center"
+                >
+                  <button>-</button>
                 </div>
-                <div class="col-xl-3 col-3">
-                  <div class="d-flex count justify-content-center">
-                  <div class="amount">
-                  <input type="number"value="1" />
-                </div> 
-            </div>
-            </div>
-            
-              <div class="col-xl-2 col-5">
-                <div class=" d-flex font-20 font-nor pd-tb-10">
-                  <p style="margin-bottom: 0">Price:</p>
-                  <p class="total" style="margin-bottom: 0"> ${info.productPrice}$</p>
+                <div
+                  class="color-black font-30 font-nor count-number d-flex justify-content-center align-items-center"
+                >
+                  1
+                </div>
+                <div
+                  class="plus font-30 font-w d-flex align-items-center justify-content-center"
+                >
+                  <button>+</button>
                 </div>
               </div>
-              <div class="col-xl-1 col-2">
-                <div class="btn-delete">
-                  <i class="bx bx-x-circle font-50"></i>
-                </div>
+            </div>
+            <div class="col-xl-2 col-5">
+              <div
+                class="d-flex justify-content-center font-20 font-nor pd-tb-10"
+              >
+                <p style="margin-bottom: 0">Price:</p>
+                <p class="total" style="margin-bottom: 0">${info.productPrice}$</p>
+              </div>
+            </div>
+            <div class="col-xl-1 col-2">
+              <div class="btn-delete">
+                <i class="bx bx-x-circle font-50"></i>
               </div>
             </div>
           </div>
+
       `;
   });
   const htmls = html.join("");
@@ -192,7 +205,7 @@ function removeCart() {
       let dish = e.target;
       let infoDish = dish.parentElement.parentElement.parentElement;
       console.log(infoDish);
-      infoDish.remove();
+      // infoDish.remove();
       let listDish = localStorage.getItem("key");
       let data = JSON.parse(listDish);
       data.splice(infoDish, 1);

@@ -295,13 +295,11 @@ function renderDish() {
                   <div class="price">${value.price}</div>
                 </div>
               </div>
-              <div
-                class="cart-mobile d-flex justify-content-between align-items-center"
-              >
+              <div class="d-flex justify-content-center">
                 <button class="add-cart-mobile-btn font-14 pimary-color font-nor">
-                  ADD 
+                  Add To Cart
                 </button>
-                <a href="cart.html"><i class="bx bx-cart"></i></a>
+              </div>
               </div>
             </div>
           </div>
@@ -380,8 +378,8 @@ page2.addEventListener("click", function () {
 
 const listDish = [];
 function addCart() {
-  const btnAddCart = document.querySelectorAll(".add-cart-btn");
-  btnAddCart.forEach(function (button, index) {
+  const btnAddCartMobile = document.querySelectorAll(".add-cart-mobile-btn");
+  btnAddCartMobile.forEach(function (button, index) {
     button.addEventListener("click", function (e) {
       const btnItem = e.target;
       const product = btnItem.parentElement.parentElement;

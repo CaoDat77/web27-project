@@ -280,7 +280,7 @@ nav {
 
 .list-nav-mobile {
   float: left;
-  width: 65%;
+  width: 70%;
   height: 100vh;
   background-color: black;
   color: white;
@@ -822,4 +822,13 @@ a {
 
 .btn-delete:hover {
   color: #e3c731;
+}
+
+.count-number,
+.minus,
+.plus {
+  cursor: pointer;
+  width: 4rem;
+  background: white;
+  height: 4rem;
 }

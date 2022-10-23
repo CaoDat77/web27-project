@@ -275,7 +275,7 @@ nav {
 
 .list-nav-mobile {
   float: left;
-  width: 65%;
+  width: 70%;
   height: 100vh;
   background-color: black;
   color: white;
@@ -608,8 +608,6 @@ ul {
   color: #f00;
 }
 
-
-
 @media screen and (max-width: 500px) {
   .font-30 {
     font-size: 2rem;
@@ -630,8 +628,6 @@ ul {
     display: block;
     font-size: 4rem;
   }
-
- 
 
   ul {
     padding: 0;
