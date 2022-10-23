@@ -672,9 +672,9 @@ a {
 .minus,
 .plus {
   cursor: pointer;
-  width: 6rem;
+  width: 4rem;
   background: white;
-  height: 6rem;
+  height: 4rem;
 }
 
 .minus:hover {
@@ -696,8 +696,4 @@ a {
 
 .plus p {
   padding-bottom: 0.6rem;
-}
-
-.cart {
-  padding-top: 1rem;
 }

@@ -142,6 +142,11 @@ const menus = [
     img: "/image_order/dish-1-1.svg",
     title: "Purple Tostada",
     price: 36,
+    decs: " Tostada is used exclusively as a breakfast or lunch and dinner gift, not eaten with other dishes.",
+    decs2:
+      " The broth of Tostada is made from the broth of beef bones: lump bone, tubular bone and clavicle.",
+    decsAll:
+      "The process of making broth, also known as broth, is the most important step. The broth of traditional pho is made from beef bones along with some spices. The bones must be washed, scraped off all the meat clinging to the bones and put in a pot with cold water. The first time the bone broth must be poured out so that the broth does not get contaminated with the bad smell of the beef bones, the next time it is used to make the broth. Roasted ginger and onion are also added.",
   },
 
   {
@@ -149,6 +154,9 @@ const menus = [
     img: "/image_order/dish-1-2.svg",
     title: "Bruno's Scribble",
     price: 30,
+    decs: "",
+    decs2: "",
+    decsAll: "",
   },
 
   {
@@ -297,6 +305,7 @@ function renderDish() {
               </div>
             </div>
           </div>
+          
     `;
   });
   let htmls = html.join("");
@@ -315,7 +324,7 @@ function renderPageNumber() {
   }
 }
 //-------------------------------------------------
-// Chức năng click tao ra trang chi tiết sản phẩm
+//Chức năng click tao ra trang chi tiết sản phẩm
 function clickDecs() {
   const clicks = document.querySelectorAll(".click-decs");
   clicks.forEach((click) => {

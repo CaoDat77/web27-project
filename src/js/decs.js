@@ -198,7 +198,26 @@ function renderDish() {
                   </div>
                 </div>
               </div>
-            </div>;
+            </div>
+            <div class="mg-t-80 pd-lr-20">
+              <h2 class="font-nor font-20 pimary-color line-primary">Description</h2>
+              <p class="font-nor font-16 mg-t-20">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
+                et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
+                felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
+                consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
+                nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
+                venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+                Integer tincidunt.
+              </p>
+
+              <p class="font-nor font-16 mg-t-20">
+                Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+                tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+                enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+              </p>
+          </div>
    `;
   });
   let htmls = html.join("");

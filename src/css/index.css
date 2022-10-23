@@ -274,6 +274,8 @@ nav {
 }
 
 .list-nav-mobile {
+  float: left;
+  margin-left: 0;
   width: 60%;
   height: 100vh;
   background-color: black;
@@ -281,6 +283,7 @@ nav {
   margin-left: auto;
   animation: showNav 1s;
 }
+
 .nav-mobile {
   padding: 1rem 2rem;
   cursor: pointer;
@@ -404,7 +407,8 @@ img:hover {
 .header-body-content {
   margin-top: 2rem;
 }
-li:last-child {
+
+.open-nav {
   display: none;
 }
 
@@ -500,6 +504,7 @@ option {
 
 .icons i {
   padding-right: 0.8rem;
+  cursor: pointer;
 }
 
 .contact-home {
@@ -579,6 +584,30 @@ a {
   transform: scale(1);
 }
 
+ul {
+  padding: 0;
+}
+
+.fb {
+  color: #1092f3;
+}
+
+.ig {
+  color: #ce2b67;
+}
+
+.tw {
+  color: #1b9ff1;
+}
+
+.pn {
+  color: #c81f24;
+}
+
+.ytb {
+  color: #f00;
+}
+
 @media screen and (max-width: 500px) {
   .font-30 {
     font-size: 2rem;
@@ -589,7 +618,7 @@ a {
   }
 }
 
-@media screen and (max-width: 786px) {
+/* /* @media screen and (max-width: 786px) {
   li:last-child {
     display: block;
   }
@@ -600,10 +629,28 @@ a {
 
   li:last-child {
     display: block;
-  }
-}
+  
+} */
 
 @media screen and (max-width: 1024px) {
+  .icons i {
+    font-size: 3rem;
+    cursor: pointer;
+  }
+
+  .open-nav {
+    display: block;
+    font-size: 4rem;
+  }
+
+  li:last-child {
+    font-size: 3.5rem;
+  }
+
+  ul {
+    padding: 0;
+  }
+
   li {
     display: none;
   }
@@ -650,7 +697,7 @@ a {
 
 @keyframes showNav {
   from {
-    transform: translateX(200%);
+    transform: translateX(-200%);
   }
   to {
     transform: translateX(0);
