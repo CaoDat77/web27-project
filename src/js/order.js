@@ -318,7 +318,7 @@ function renderPageNumber() {
   for (let i = 1; i <= totalPage; i++) {
     document.querySelector(
       ".number-page"
-    ).innerHTML += `<p class="btn${i}">${i}</p>`;
+    ).innerHTML += `<p class="btn${i} font-nor">${i}</p>`;
   }
 }
 //-------------------------------------------------
