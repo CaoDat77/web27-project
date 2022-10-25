@@ -12,7 +12,7 @@ const listNavMobile = document.querySelector(".list-nav-mobile");
 const btnNavForm = document.querySelector(".table-online");
 const aboutBtn = document.querySelector(".introduce-nav");
 const navAbout = document.querySelector(".abouts-nav");
-const accountNav = document.querySelector(".account-nav");
+
 const listAcc = document.querySelector(".accounts");
 const signBtn = document.querySelector(".sign-btn");
 const signForm = document.querySelector(".form-sign");
@@ -71,10 +71,6 @@ btnNavForm.addEventListener("click", showMolda);
 
 aboutBtn.addEventListener("click", function () {
   navAbout.classList.toggle("d-toggle");
-});
-
-accountNav.addEventListener("click", () => {
-  listAcc.classList.toggle("d-toggle");
 });
 
 window.onscroll = function () {
