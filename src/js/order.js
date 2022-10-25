@@ -12,7 +12,7 @@ const listNavMobile = document.querySelector(".list-nav-mobile");
 const btnNavForm = document.querySelector(".table-online");
 const aboutBtn = document.querySelector(".introduce-nav");
 const navAbout = document.querySelector(".abouts-nav");
-const accountNav = document.querySelector(".account-nav");
+
 const listAcc = document.querySelector(".accounts");
 const signBtn = document.querySelector(".sign-btn");
 const signForm = document.querySelector(".form-sign");
@@ -21,6 +21,7 @@ const registerBtn = document.querySelector(".register-btn");
 const moldaSignIn = document.querySelector(".molda-account");
 const signBtnOpens = document.querySelectorAll(".sign-open");
 const btnCloseMoldaTable = document.querySelector(".molda span");
+const small = document.querySelector(".form-sign-in small");
 
 signBtnOpens.forEach((signBtnOpen) => {
   signBtnOpen.addEventListener("click", function () {
@@ -71,10 +72,6 @@ btnNavForm.addEventListener("click", showMolda);
 
 aboutBtn.addEventListener("click", function () {
   navAbout.classList.toggle("d-toggle");
-});
-
-accountNav.addEventListener("click", () => {
-  listAcc.classList.toggle("d-toggle");
 });
 
 window.onscroll = function () {
@@ -129,7 +126,7 @@ formSignIn.addEventListener("submit", (e) => {
   const data = JSON.parse(user);
 
   if (user === null) {
-    alert("vui lòng nhập username và password");
+    small.innerHTML = "Wrong Username Or Password";
   } else if (userName == data.userName && password == data.password) {
     alert("Đăng nhập thành công");
     moldaSignIn.style.display = "none";
@@ -262,8 +259,6 @@ let currentPage = 1;
 let perPage = 8;
 let totalPage = 0;
 let perDish = [];
-
-console.log(menus.length);
 
 async function getDish() {
   perDish = menus.slice(

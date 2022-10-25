@@ -608,6 +608,10 @@ ul {
   color: #f00;
 }
 
+.color-red {
+  color: #fc6437;
+}
+
 @media screen and (max-width: 500px) {
   .font-30 {
     font-size: 2rem;
