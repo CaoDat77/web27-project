@@ -154,7 +154,7 @@ function renderItem() {
             >
               ${info.productName}
             </div>
-            <div class="col-xl-3 col-3">
+            <div class="col-xl-3 col-12">
               <div class="d-flex count justify-content-center">
                 <div
                   class="minus font-50 font-w d-flex align-items-center justify-content-center"

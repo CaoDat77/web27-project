@@ -93,10 +93,10 @@ function scrollFunction() {
 const formSignUp = document.querySelector(".form-sign-up");
 formSignUp.addEventListener("submit", (e) => {
   e.preventDefault();
-  const userName = document.querySelector("#user-sign-up").value;
-  const password = document.querySelector("#password-sign-up").value;
-  const email = document.querySelector("#email-sign-up").value;
-  const cfpassword = document.querySelector("#cfpassword-sign-up").value;
+  const userName = document.querySelector("#user-sign-up").value.trim();
+  const password = document.querySelector("#password-sign-up").value.trim();
+  const email = document.querySelector("#email-sign-up").value.trim();
+  const cfpassword = document.querySelector("#cfpassword-sign-up").value.trim();
   const textInput = document.querySelectorAll(".text-input");
 
   console.log(userName);
