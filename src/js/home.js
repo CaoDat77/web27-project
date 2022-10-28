@@ -129,5 +129,8 @@ formSignIn.addEventListener("submit", (e) => {
   } else if (userName == data.userName && password == data.password) {
     alert("Đăng nhập thành công");
     moldaSignIn.style.display = "none";
+    signBtnOpens.forEach(function (signBtnOpen) {
+      signBtnOpen.classList.add("pimary-color");
+    });
   }
 });
