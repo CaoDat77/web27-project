@@ -658,7 +658,7 @@ a {
 
   li:last-child {
     display: block;
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 
   .form-table {
@@ -711,9 +711,9 @@ a {
 .minus,
 .plus {
   cursor: pointer;
-  width: 4rem;
+  width: 5rem;
   background: white;
-  height: 4rem;
+  height: 5rem;
 }
 
 .minus:hover {

@@ -187,7 +187,7 @@ function renderDish() {
                       </div>
                       <button class="set-btn mg-l-20">Add To Cart</button>
                       <a href="cart.html">
-                        <button class="set-btn mg-l-20">
+                        <button class="set-btn mg-l-20 none">
                           <i class="bx bx-cart cart"></i>
                         </button>
                       </a>
