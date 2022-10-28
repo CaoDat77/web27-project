@@ -202,7 +202,7 @@ function removeCart() {
       let dish = e.target;
       let infoDish = dish.parentElement.parentElement.parentElement;
       console.log(infoDish);
-      // infoDish.remove();
+      infoDish.remove();
       let listDish = localStorage.getItem("key");
       let data = JSON.parse(listDish);
       data.splice(infoDish, 1);
